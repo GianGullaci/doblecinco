@@ -28,7 +28,7 @@
     <nav class="navbar navbar-expand-lg p-0">
         <div class="container">
             <a class="navbar-brand" href="index.php"><img width="300px" src="img/home/logo3_pc.png" /></a>
-            <div class="navbar-item">
+            <div class="navbar-item d-none d-xl-block">
             <div class="nav-item text-muted" id="current_date">
               <script>
                 var meses = new Array ("Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre");
