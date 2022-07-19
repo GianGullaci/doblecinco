@@ -1,4 +1,5 @@
-    <footer>
+    <!--<footer>
+    <section class="pt-4 pb-0">
     <div class="container-fluid bg-dark fixed-bottom">
         <div class="row">
             <div class=" footer col-md text-light py-3">
@@ -6,6 +7,8 @@
             </div>
         </div>
     </div>
+    </section>
+    </footer>-->
     
 
     <!-- Bootstrap JavaScript Libraries -->
