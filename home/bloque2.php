@@ -4,7 +4,7 @@
             <div class="col-lg-4">
                 <div class="row g-4">
                     <div class="g-col-md-6">
-                        <div class="card" style="background-image:url('img/modulos/m 4.jpg'); background-position:center left;background-size:cover;overflow:hidden;z-index:99;will-change:transform;height:calc(280px - calc(var(--bs-gutter-y) / 2));">
+                        <div class="card" style="background-image:url('img/modulos/m2 h.jpg'); background-position:center left;background-size:cover;overflow:hidden;z-index:99;will-change:transform;height:calc(280px - calc(var(--bs-gutter-y) / 2));">
                             <div class="card-img-overlay d-flex align-items-center p-3 p-sm-4">
                                 <div class="w-100 mt-auto">
                                     <a href="" class="badge bg-secondary bg-gradient mb-2 bg-opacity-75">
@@ -20,7 +20,7 @@
                         </div>
                     </div>
                     <div class="g-col-md-6">
-                        <div class="card" style="background-image:url('img/modulos/m 4.jpg'); background-position:center left;background-size:cover;overflow:hidden;z-index:99;will-change:transform;height:calc(280px - calc(var(--bs-gutter-y) / 2));">
+                        <div class="card" style="background-image:url('img/modulos/m2 h.jpg'); background-position:center left;background-size:cover;overflow:hidden;z-index:99;will-change:transform;height:calc(280px - calc(var(--bs-gutter-y) / 2));">
                             <div class="card-img-overlay d-flex align-items-center p-3 p-sm-4">
                                 <div class="w-100 mt-auto">
                                     <a href="" class="badge bg-secondary bg-gradient mb-2 bg-opacity-75">
@@ -38,7 +38,7 @@
                 </div>
             </div>
             <div class="col-lg-8">
-                <div class="card" style="background-image:url('img/modulos/m 4.jpg'); background-position:center left;background-size:cover;overflow:hidden;z-index:99;will-change:transform;height:560px;">
+                <div class="card" style="background-image:url('img/modulos/m2 h.jpg'); background-position:center left;background-size:cover;overflow:hidden;z-index:99;will-change:transform;height:560px;">
                     <div class="card-img-overlay d-flex align-items-center p-3 p-sm-4">
                         <div class="w-100 mt-auto">
                             <a href="" class="badge bg-secondary bg-gradient mb-2 bg-opacity-75">

@@ -1,4 +1,24 @@
-    <!--<footer>
+<section class="pt-4 pb-0 card-grid">
+    <div  style="background: #ced4da">
+        <div class="container">
+            <center style="padding: 0px 0px 0px 0px;">
+            <?php
+                foreach($equipos as $dato){
+            ?>
+                
+            <div style="margin: 10px;display:inline-block;width: 60px;">
+                <a href="club.php?id_equipo=<?php echo $dato->id_equipo;?>"  title="<?php echo $dato->nombre_equipo;?>">
+                    <img width="40px" src="imagenes/<?php echo $dato->logo_equipo; ?>" />
+                </a>
+            </div>
+            <?php
+                }
+            ?>
+            </center>
+        </div>
+    </div>
+</section>
+   <!--<footer>
     <section class="pt-4 pb-0">
     <div class="container-fluid bg-dark fixed-bottom">
         <div class="row">
