@@ -17,11 +17,6 @@
 
     <STYLE>A {text-decoration: none;} </STYLE>
 
-    <?php
-        include_once "model/conexion.php";
-        $sentencia = $bd -> query( "select * from equipos");
-        $equipos = $sentencia->fetchAll(PDO::FETCH_OBJ);
-    ?>
   </head>
 
   <body > 
@@ -54,21 +49,43 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div id="MenuNavegacion" class="collapse navbar-collapse">
-          <u1 class="navbar-nav ms-3">
-            <l1 class="nav-item dropdown">
+          <u1 class="navbar-nav w-100">
+
+            <li class="nav-item w-100">
+							<a class="nav-link text-center" href="index.php">Inicio</a>
+						</li>
+
+            <?php
+              include_once "model/conexion.php";
+              $sentencia = $bd -> query("select * from categorias_notas
+                                          where categorias_notas_id_categoria_notas=0 and activa=1");
+              $result = $sentencia->fetchAll(PDO::FETCH_OBJ);
+              foreach($result as $row){
+            ?>
+
+            <l1 class="nav-item dropdown w-100">
               <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
-                Torneos
+                <?php echo $row->nombre_categoria;?>
               </a>
               <u1 class="dropdown-menu">
-                <l1><a class="dropdown-item" href="torneos.php">Torneos</a></l1>
-                <l1><a class="dropdown-item" href="fechas.php">Fechas</a></l1>
-                <l1><a class="dropdown-item" href="partidos.php">Partidos</a></l1>
+
+                <?php
+                  include_once "model/conexion.php";
+                  $sentencia = $bd -> query("select * from    categorias_notas
+                                          where categorias_notas_id_categoria_notas='$row->id_categoria_notas' and activa=1");
+                  $result2 = $sentencia->fetchAll(PDO::FETCH_OBJ);
+                  foreach($result2 as $row2){
+                ?>
+
+                <l1><a class="dropdown-item" href="#"><?php echo $row2->nombre_categoria;?></a></l1>
+                <?php
+								  }
+							  ?>
               </u1>
             </l1>
-            <l1 class="nav-item"><a class="nav-link" href="equipos.php">Equipos</a></l1>
-            <l1 class="nav-item"><a class="nav-link" href="jugadores.php">Jugadores</a></l1>
-            <l1 class="nav-item"><a class="nav-link" href="ciudades.php">Ciudades</a></l1>
-            <l1 class="nav-item"><a class="nav-link" href="usuarios.php">Administradores</a></l1>
+            <?php
+								}
+							?>
           </u1>
         </div> 
       </div>
@@ -85,12 +102,15 @@
     <div class="container">
       <center style="padding: 0px 0px 0px 0px;">
         <?php
-            foreach($equipos as $dato){
+          include_once "model/conexion.php";
+          $sentencia = $bd -> query( "select * from clubes where club_activo=1");
+          $clubes = $sentencia->fetchAll(PDO::FETCH_OBJ);
+          foreach($clubes as $dato){
         ?>
                 
-        <div style="margin: 10px;display:inline-block;width: 60px;">
-            <a href="club.php?id_equipo=<?php echo $dato->id_equipo;?>"  title="<?php echo $dato->nombre_equipo;?>">
-                <img width="40px" src="imagenes/<?php echo $dato->logo_equipo; ?>" />
+        <div style="margin: 13px;display:inline-block;width: 30px;">
+            <a href="club.php?id_club=<?php echo $dato->id_club;?>"  title="<?php echo $dato->nombre_club;?>">
+                <img width="40px" src="img/logos/<?php echo $dato->logo_club2; ?>" />
             </a>
         </div>
         <?php
