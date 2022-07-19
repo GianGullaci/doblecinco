@@ -1,3 +1,9 @@
+<?php
+    include_once "model/conexion.php";
+    $sentencia = $bd -> query( "select * from equipos");
+    $equipos = $sentencia->fetchAll(PDO::FETCH_OBJ);
+?>
+
 <section class="pt-4 pb-0 card-grid">
     <div  style="background: #ced4da">
         <div class="container">
@@ -18,17 +24,33 @@
         </div>
     </div>
 </section>
-   <!--<footer>
-    <section class="pt-4 pb-0">
-    <div class="container-fluid bg-dark fixed-bottom">
-        <div class="row">
-            <div class=" footer col-md text-light py-3">
-                Desarrollado por Gian
+
+<footer class="bg-dark pt-0">
+        <div class="container">
+            <div class="row pt-1 align-items-center justify-content-md-between">
+                <div class="col-md-4 text-light py-3">
+                    <div class="text-center text-md-start">
+                        <font style="vertical-align: inherit;">© Copyright D5 2022</font>
+                    </div>
+                </div>
+                <div class="col-md-4 text-light py-3">
+                    <div class="text-center text-md-center">
+                        <ul class="nav justify-content-center">
+                            <l1 class="nav-item"><a class="nav-link px-2 fs-5 text-white" href="https://www.facebook.com/doblecincobahia" target="_blank"><i class="bi bi-facebook"></i></a></l1>
+                            <l1 class="nav-item"><a class="nav-link px-2 fs-5 text-white" href="https://www.twitter.com/doblecincobahia" target="_blank"><i class="bi bi-twitter"></i></a></l1>
+                            <l1 class="nav-item"><a class="nav-link px-2 fs-5 text-white" href="https://www.instagram.com/doblecincobahia/" target="_blank"><i class="bi bi-instagram"></i></a></l1>
+                            <l1 class="nav-item"><a class="nav-link px-2 fs-5 text-white" href="https://www.youtube.com/channel/UCQgHOUzwUX6X3HR1vtpZLDA" target="_blank"><i class="bi bi-youtube"></i></a></l1>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-4 text-light py-3">
+                    <div class="text-center text-md-end">
+                        <font style="vertical-align: inherit;text-align:right;">Dirección: Bahía Blanca, Buenos Aires, Argentina</font>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-    </section>
-    </footer>-->
+</footer>
     
 
     <!-- Bootstrap JavaScript Libraries -->
