@@ -15,11 +15,47 @@
 
     <link rel="shortcut ico" href="/img/home/c iso d5 1.png iso d5 1.png" class="favicon">
 
+    <link rel="stylesheet" href="css/media.css">
+
     <STYLE>A {text-decoration: none;} </STYLE>
 
   </head>
 
   <body > 
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function(){
+      if (window.innerWidth > 992) {
+	      document.querySelectorAll('.navbar .nav-item').forEach(function(everyitem){
+
+		      everyitem.addEventListener('mouseover', function(e){
+
+			      let el_link = this.querySelector('a[data-bs-toggle]');
+
+			      if(el_link != null){
+				      let nextEl = el_link.nextElementSibling;
+				      el_link.classList.add('show');
+				      nextEl.classList.add('show');
+			      }
+
+		      });
+		      everyitem.addEventListener('mouseleave', function(e){
+			      let el_link = this.querySelector('a[data-bs-toggle]');
+
+			      if(el_link != null){
+				      let nextEl = el_link.nextElementSibling;
+				      el_link.classList.remove('show');
+				      nextEl.classList.remove('show');
+			      }
+
+
+		      })
+	      });
+
+      }
+    // end if innerWidth
+    }); 
+  </script>
  
   <header class="navbar-light navbar-sticky header-static bg-white">
     <nav class="navbar navbar-expand-lg p-0">
@@ -43,20 +79,24 @@
             </div>
         </div>
     </nav>
+
     <nav class="navbar navbar-expand-lg fw-bold p-0">
       <div class="container">
-        <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#MenuNavegacion">
+        <button type="button" class="navbar-toggler" data-bs-toggle="offcanvas" data-bs-target="#MenuNavegacion">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div id="MenuNavegacion" class="collapse navbar-collapse">
-          <u1 class="navbar-nav w-100">
+        <div id="MenuNavegacion" class=" offcanvas offcanvas-start w-50">
+          <div class="offcanvas-header">
+            <button type="button" class="btn-close btn-close-dark" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <u1 class="navbar-nav mx-auto" >
 
             <li class="nav-item w-100">
-							<a class="nav-link text-center" href="index.php">Inicio</a>
+							<a class="nav-link" href="index.php">Inicio</a>
 						</li>
 
             <?php
-              include_once "model/conexion.php";
+              include_once "model\conexion.php";
               $sentencia = $bd -> query("select * from categorias_notas
                                           where categorias_notas_id_categoria_notas=0 and activa=1");
               $result = $sentencia->fetchAll(PDO::FETCH_OBJ);

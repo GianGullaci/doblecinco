@@ -1,20 +1,17 @@
-<?php
-    include_once "model/conexion.php";
-    $sentencia = $bd -> query( "select * from equipos");
-    $equipos = $sentencia->fetchAll(PDO::FETCH_OBJ);
-?>
-
 <section class="pt-4 pb-0 card-grid">
     <div  style="background: #ced4da">
         <div class="container">
             <center style="padding: 0px 0px 0px 0px;">
             <?php
-                foreach($equipos as $dato){
+                include_once "model/conexion.php";
+                $sentencia = $bd -> query( "select * from clubes where club_activo=1");
+                $clubes = $sentencia->fetchAll(PDO::FETCH_OBJ);
+                foreach($clubes as $dato){
             ?>
                 
-            <div style="margin: 10px;display:inline-block;width: 60px;">
-                <a href="club.php?id_equipo=<?php echo $dato->id_equipo;?>"  title="<?php echo $dato->nombre_equipo;?>">
-                    <img width="40px" src="imagenes/<?php echo $dato->logo_equipo; ?>" />
+            <div style="margin: 13px;display:inline-block;width: 30px;">
+                <a href="club.php?id_club=<?php echo $dato->id_club;?>"  title="<?php echo $dato->nombre_club;?>">
+                    <img width="40px" src="img/logos/<?php echo $dato->logo_club2; ?>" />
                 </a>
             </div>
             <?php
