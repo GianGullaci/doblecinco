@@ -3,7 +3,7 @@
     border-radius:2%;
 }
 
-.img-alargada{
+.img-larga{
     height: 266px;
     border-radius:2%;
 }
@@ -28,7 +28,7 @@
     .img-grande{
         height:480px;
     }
-    .img-alargada{
+    .img-larga{
         height: 266px;
     }
     .publi-alargada{
