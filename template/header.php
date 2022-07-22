@@ -15,7 +15,7 @@
 
     <link rel="shortcut ico" href="/img/home/c iso d5 1.png iso d5 1.png" class="favicon">
 
-    <link rel="stylesheet" href="css/media.css">
+    <link rel="stylesheet" href="css\media.css" type="text/css">
 
     <STYLE>A {text-decoration: none;} </STYLE>
 
