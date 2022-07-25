@@ -15,7 +15,7 @@
     ?>
 
         <div class="card">
-            <img src="img/publicidades/<?php echo $row->id_publicidad;?>/<?php echo $row->archivo_publicidad;?>" class="publi-long">
+            <a href="<?php echo $row->link_publicidad;?>" target="_blank"><img src="img/publicidades/<?php echo $row->id_publicidad;?>/<?php echo $row->archivo_publicidad;?>" class="publi-long"></a>
         </div>
 
     <?php

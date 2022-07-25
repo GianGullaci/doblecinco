@@ -18,7 +18,13 @@
 }
 
 .publi-long {
-  height: 200px;
+  height: 250px;
+  width: 100%;
+}
+
+.publi-small {
+  height: 300px;
+  width: 100%;
 }
 
 @media (max-width: 767px) {
@@ -35,6 +41,10 @@
   }
 
   .publi-long {
-    height: 130px;
+    height: 160px;
+  }
+
+  .publi-small {
+    height: 360px;
   }
 }

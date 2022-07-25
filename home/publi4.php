@@ -1,6 +1,26 @@
 <section class="pt-4 pb-0 card-grid">
     <div class="container">
-        <div class="card" style="background-image:url('https://i.gifer.com/HAOP.gif'); background-position:center;background-size:cover;background-repeat:repeat;overflow:hidden;z-index:99;will-change:transform;height:200px;">
+
+    <?php
+        include_once "model\conexion.php";
+        $sentencia = $bd -> query("SELECT * 
+		FROM publicidades_posicionadas
+		LEFT JOIN publicidades ON publicidades_id_publicidad = id_publicidad
+		LEFT JOIN ubicaciones_publicidades ON id_ubicacion=ubicaciones_id_ubicacion
+		where seccion='home' AND nombre_ubicacion='B2' 
+		order by RAND()
+		LIMIT 0,1");
+        $result = $sentencia->fetchAll(PDO::FETCH_OBJ);
+        foreach ($result as $row) {
+    ?>
+
+        <div class="card">
+            <a href="<?php echo $row->link_publicidad;?>" target="_blank"><img src="img/publicidades/<?php echo $row->id_publicidad;?>/<?php echo $row->archivo_publicidad;?>" class="publi-long"></a>
         </div>
+
+    <?php
+        }
+    ?>
+
     </div>
 </section>

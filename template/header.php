@@ -1,3 +1,28 @@
+<!doctype html>
+<html lang="es" style="height: 100%;">
+  <head>
+    <title>Doble 5</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="css/styles.css">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+    <!--<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"  integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">-->
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.6.1/font/bootstrap-icons.css">
+
+    <link rel="shortcut ico" href="/img/home/c iso d5 1.png iso d5 1.png" class="favicon">
+
+    <STYLE>A {text-decoration: none;} </STYLE>
+
+  </head>
+  
+  <body > 
+  
   <script>
     document.addEventListener("DOMContentLoaded", function(){
       if (window.innerWidth > 992) {
@@ -107,11 +132,31 @@
     </nav>
   </header>
 
-  <div style="background: #29A8FF">
-    <div class="container">
-
+  <section class="pt-4 pb-0 card-grid">
+    <div style="background: #29A8FF">
+      <div class="container">
+        <center style="padding: 0px 0px 0px 0px;">
+          <div class="row g-4">
+            <div class="col-4 mt-0">
+              <div class="card justify-content-center" style="height: 100% !important;">
+                <a href=""><h5 class="card-title text-dark fw-bold">Posiciones</h5></a>
+              </div>
+            </div>
+            <div class="col-4 mt-0">
+              <div class="card justify-content-center" style="height: 100% !important;">
+                <a href=""><h5 class="card-title text-dark fw-bold">Goleadores</h5></a>
+              </div>
+            </div>
+            <div class="col-4 mt-0">
+              <div class="card justify-content-center" style="height: 100% !important;">
+                <a href=""><h5 class="card-title text-dark fw-bold">Fixture</h5></a>
+              </div>
+            </div>
+          </div>
+        </center>
+      </div>
     </div>
-  </div>
+  </section>
 
   <div  style="background: #ced4da">
     <div class="container">
