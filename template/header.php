@@ -136,20 +136,29 @@
     <div style="background: #29A8FF">
       <div class="container">
         <center style="padding: 0px 0px 0px 0px;">
-          <div class="row g-4">
+          <div class="row g-4 pt-2 pb-2 align-items-center w-75">
             <div class="col-4 mt-0">
-              <div class="card justify-content-center" style="height: 100% !important;">
-                <a href=""><h5 class="card-title text-dark fw-bold">Posiciones</h5></a>
+              <div class="card align-items-center mt-0 mb-0" style="height: 100%;width:75%;">
+                <a href="">
+                  <img class="pt-2 pb-2" src="img/logo-posiciones.png" height="50px" alt="">
+                  <p class="font-weight-bold mb-0 text-dark fw-bold" style="display:inline-block;">Posiciones</p>
+                </a>
               </div>
             </div>
             <div class="col-4 mt-0">
-              <div class="card justify-content-center" style="height: 100% !important;">
-                <a href=""><h5 class="card-title text-dark fw-bold">Goleadores</h5></a>
+              <div class="card align-items-center mt-0 mb-0" style="height: 100%;width:75%;">
+                <a href="">
+                  <img class="pt-2 pb-2" src="img/logo-goleadores.png" height="50px" alt="">
+                  <p class="font-weight-bold mb-0 text-dark fw-bold" style="display:inline-block;">Goleadores</p>
+                </a>
               </div>
             </div>
             <div class="col-4 mt-0">
-              <div class="card justify-content-center" style="height: 100% !important;">
-                <a href=""><h5 class="card-title text-dark fw-bold">Fixture</h5></a>
+              <div class="card align-items-center mt-0 mb-0" style="height: 100%;width:75%;">
+                <a href="">
+                  <img class="pt-2 pb-2" src="img/logo-estadisticas.png" height="50px" alt="">
+                  <p class="font-weight-bold mb-0 text-dark fw-bold" style="display:inline-block;">Estadísticas</p>
+                </a>
               </div>
             </div>
           </div>
