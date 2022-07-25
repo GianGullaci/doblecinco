@@ -3,7 +3,7 @@
         <div class="row g-4">
             <div class="col-lg-3">
                 <div class="card">
-                    <img src="img/modulos/m2 h.jpg" class="img-pequeña" alt="">
+                    <img src="img/modulos/m2 h.jpg" class="img-small" alt="">
                     <div class="card-img-overlay d-flex align-items-center p-3 p-sm-4">
                         <div class="w-100 mt-auto">
                             <a href="" class="badge bg-secondary bg-gradient mb-2 bg-opacity-75">
@@ -20,7 +20,7 @@
             </div>
             <div class="col-lg-6">
                 <div class="card">
-                    <img src="img/modulos/m2 h.jpg" class="img-pequeña" alt="">
+                    <img src="img/modulos/m2 h.jpg" class="img-small" alt="">
                     <div class="card-img-overlay d-flex align-items-center p-3 p-sm-4">
                         <div class="w-100 mt-auto">
                             <a href="" class="badge bg-secondary bg-gradient mb-2 bg-opacity-75">
@@ -37,7 +37,7 @@
             </div>
             <div class="col-lg-3">
                 <div class="card">
-                    <img src="img/modulos/m2 h.jpg" class="img-pequeña" alt="">
+                    <img src="img/modulos/m2 h.jpg" class="img-small" alt="">
                     <div class="card-img-overlay d-flex align-items-center p-3 p-sm-4">
                         <div class="w-100 mt-auto">
                             <a href="" class="badge bg-secondary bg-gradient mb-2 bg-opacity-75">

@@ -1,0 +1,40 @@
+.img-long {
+  height: 266px;
+  border-radius: 2%;
+}
+
+.img-small {
+  height: 266px;
+  border-radius: 2%;
+}
+
+.img-large {
+  height: 560px;
+  border-radius: 2%;
+}
+
+.card {
+  border: none !important;
+}
+
+.publi-long {
+  height: 200px;
+}
+
+@media (max-width: 767px) {
+  .img-long {
+    height: 350px;
+  }
+
+  .img-small {
+    height: 480px;
+  }
+
+  .img-large {
+    height: 480px;
+  }
+
+  .publi-long {
+    height: 130px;
+  }
+}

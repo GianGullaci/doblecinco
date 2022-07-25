@@ -4,7 +4,7 @@
         <div class="row g-4">
             <div class="col-lg-6">
                 <div class="card">
-                    <img src="img/modulos/m 4.jpg" class="img-grande" alt="">
+                    <img src="img/modulos/m 4.jpg" class="img-large" alt="">
                     <div class="card-img-overlay d-flex align-items-center p-3 p-sm-4">
                         <div class="w-100 mt-auto">
                             <a href="" class="badge bg-secondary bg-gradient mb-2 bg-opacity-75">
@@ -23,7 +23,7 @@
                 <div class="row g-4">
                     <div class="col-md-6">
                         <div class="card">
-                            <img src="img/modulos/m 4.jpg" class="img-pequeña" alt="">
+                            <img src="img/modulos/m 4.jpg" class="img-small" alt="">
                             <div class="card-img-overlay d-flex align-items-center p-3 p-sm-4">
                                 <div class="w-100 mt-auto">
                                 <a href="" class="badge bg-secondary bg-gradient mb-2 bg-opacity-75">
@@ -40,7 +40,7 @@
                     </div>
                     <div class="col-md-6">
                         <div class="card">
-                            <img src="img/modulos/m 4.jpg" class="img-pequeña" alt="">
+                            <img src="img/modulos/m 4.jpg" class="img-small" alt="">
                             <div class="card-img-overlay d-flex align-items-center p-3 p-sm-4">
                                 <div class="w-100 mt-auto">
                                     <a href="" class="badge bg-secondary bg-gradient mb-2 bg-opacity-75">
@@ -57,7 +57,7 @@
                     </div>
                     <div class="col-12">
                         <div class="card">
-                            <img src="img/modulos/m 4.jpg" class="img-pequeña" alt="">
+                            <img src="img/modulos/m 4.jpg" class="img-small" alt="">
                             <div class="card-img-overlay d-flex align-items-center p-3 p-sm-4">
                                 <div class="w-100 mt-auto">
                                     <a href="" class="badge bg-secondary bg-gradient mb-2 bg-opacity-75">

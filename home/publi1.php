@@ -15,7 +15,7 @@
     ?>
 
         <div class="card">
-            <img src="img/publicidades/<?php echo $row->id_publicidad;?>/<?php echo $row->archivo_publicidad;?>" class="publi-alargada">
+            <img src="img/publicidades/<?php echo $row->id_publicidad;?>/<?php echo $row->archivo_publicidad;?>" class="publi-long">
         </div>
 
     <?php
