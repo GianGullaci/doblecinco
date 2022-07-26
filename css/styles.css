@@ -13,6 +13,16 @@
   border-radius: 2%;
 }
 
+.img-nota {
+  height: 500px;
+  border-radius: 2%;
+}
+
+.img-gallery {
+  height: 120px;
+  width: 200px;
+}
+
 .card {
   border: none !important;
 }
@@ -27,6 +37,11 @@
   width: 100%;
 }
 
+.publi-nota {
+  height: 250px;
+  width: 100%;
+}
+
 @media (max-width: 767px) {
   .img-long {
     height: 350px;
@@ -38,6 +53,15 @@
 
   .img-large {
     height: 480px;
+  }
+
+  .img-nota {
+    height: 300px;
+    border-radius: 2%;
+  }
+
+  .iframe {
+    width: 500px;
   }
 
   .publi-long {
