@@ -138,7 +138,7 @@
         <center style="padding: 0px 0px 0px 0px;">
           <div class="row g-4 pt-2 pb-2 align-items-center w-75">
             <div class="col-4 mt-0">
-              <div class="card align-items-center mt-0 mb-0" style="height: 100%;width:75%;">
+              <div class="card align-items-center mt-0 mb-0">
                 <a href="">
                   <img class="pt-2 pb-2" src="img/logo-posiciones.png" height="50px" alt="">
                   <p class="font-weight-bold mb-0 text-dark fw-bold" style="display:inline-block;">Posiciones</p>
@@ -146,7 +146,7 @@
               </div>
             </div>
             <div class="col-4 mt-0">
-              <div class="card align-items-center mt-0 mb-0" style="height: 100%;width:75%;">
+              <div class="card align-items-center mt-0 mb-0">
                 <a href="">
                   <img class="pt-2 pb-2" src="img/logo-goleadores.png" height="50px" alt="">
                   <p class="font-weight-bold mb-0 text-dark fw-bold" style="display:inline-block;">Goleadores</p>
@@ -154,7 +154,7 @@
               </div>
             </div>
             <div class="col-4 mt-0">
-              <div class="card align-items-center mt-0 mb-0" style="height: 100%;width:75%;">
+              <div class="card align-items-center mt-0 mb-0">
                 <a href="">
                   <img class="pt-2 pb-2" src="img/logo-estadisticas.png" height="50px" alt="">
                   <p class="font-weight-bold mb-0 text-dark fw-bold" style="display:inline-block;">Estadísticas</p>
