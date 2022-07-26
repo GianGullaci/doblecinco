@@ -21,7 +21,7 @@
                     ?>
 
                         <div class="card">
-                            <img src="img/notas/<?php echo $row->id_nota;?>/<?php echo $row->imagen_principal;?>" class="img-small" alt="">
+                            <img src="img/notas/<?php echo $row->id_nota;?>/<?php echo $row->imagen_principal;?>" class="img-long" alt="">
                             <div class="card-img-overlay d-flex align-items-center p-3 p-sm-4">
                                 <div class="w-100 mt-auto">
                                     <a href="" class="badge bg-secondary bg-gradient mb-2 bg-opacity-75">
@@ -59,7 +59,7 @@
                     ?>
 
                         <div class="card">
-                            <img src="img/notas/<?php echo $row->id_nota;?>/<?php echo $row->imagen_principal;?>" class="img-small" alt="">
+                            <img src="img/notas/<?php echo $row->id_nota;?>/<?php echo $row->imagen_principal;?>" class="img-long" alt="">
                             <div class="card-img-overlay d-flex align-items-center p-3 p-sm-4">
                                 <div class="w-100 mt-auto">
                                     <a href="" class="badge bg-secondary bg-gradient mb-2 bg-opacity-75">
