@@ -1,0 +1,100 @@
+.img-long {
+  height: 266px;
+  border-radius: 2%;
+}
+
+.img-small {
+  height: 266px;
+  border-radius: 2%;
+}
+
+.img-large {
+  height: 560px;
+  border-radius: 2%;
+}
+
+.img-nota {
+  height: 500px;
+  border-radius: 2%;
+}
+
+.img-gallery {
+  height: 120px;
+  width: 200px;
+}
+
+.img-category {
+  background-color: rgba(0,0,0,0.8);
+  background-image: url(../img/nota-ppal.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 25vh;
+  width: 100%;
+  filter:brightness(0.6);
+}
+
+.card {
+  border: none !important;
+}
+
+.publi-long {
+  height: 250px;
+  width: 100%;
+}
+
+.publi-small {
+  height: 300px;
+  width: 100%;
+}
+
+.publi-nota {
+  width: 100%;
+}
+
+.button-offcanvas {
+  position: absolute;
+  margin-top: -60px;
+  right: 10px;
+}
+
+@media (max-width: 767px) {
+  .img-long {
+    height: 350px;
+  }
+
+  .img-small {
+    height: 480px;
+  }
+
+  .img-large {
+    height: 480px;
+  }
+
+  .img-nota {
+    height: 260px;
+    border-radius: 2%;
+  }
+
+  .img-category {
+    height: 150px;
+    width: 100%;
+  }
+
+  .publi-long {
+    height: 150px;
+  }
+
+  .publi-small {
+    height: 360px;
+  }
+
+  .publi-nota {
+    height: 325px;
+  }
+
+  .texto-nota iframe{
+    width: 450px;
+    height: 250px;
+  }
+}

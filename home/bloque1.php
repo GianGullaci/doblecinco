@@ -26,7 +26,7 @@
                                 <font style="vertical-align: inherit;"><?php echo $row->categoria;?></font>
                             </a>
                             <h2 class="text-white fw-bolder">
-                                <a href="notas.php?id=<?php echo $row->id_nota;?>" class="stretched-link text-reset badge bg-secondary bg-gradient bg-opacity-75" style="white-space: initial; overflow: hidden;text-align:left;">
+                                <a href="nota.php?id=<?php echo $row->id_nota;?>" class="stretched-link text-reset badge bg-secondary bg-gradient bg-opacity-75" style="white-space: initial; overflow: hidden;text-align:left;">
                                     <font style="vertical-align: inherit;"><?php echo $row->titulo_nota;?></font>  
                                 </a>
                             </h2>
@@ -66,7 +66,7 @@
                                     <font style="vertical-align: inherit;"><?php echo $row->categoria;?></font>
                                 </a>
                                 <h4 class="text-white fw-bolder">
-                                    <a href="notas.php?id=<?php echo $row->id_nota;?>" class="stretched-link text-reset badge bg-secondary bg-gradient bg-opacity-75" style="white-space: initial; overflow: hidden;text-align:left;">
+                                    <a href="nota.php?id=<?php echo $row->id_nota;?>" class="stretched-link text-reset badge bg-secondary bg-gradient bg-opacity-75" style="white-space: initial; overflow: hidden;text-align:left;">
                                         <font style="vertical-align: inherit;"><?php echo $row->titulo_nota;?></font>  
                                     </a>
                                 </h4>
@@ -104,7 +104,7 @@
                                     <font style="vertical-align: inherit;"><?php echo $row->categoria;?></font>
                                 </a>
                                 <h4 class="text-white fw-bolder">
-                                    <a href="notas.php?id=<?php echo $row->id_nota;?>" class="stretched-link text-reset badge bg-secondary bg-gradient bg-opacity-75" style="white-space: initial; overflow: hidden;text-align:left;">
+                                    <a href="nota.php?id=<?php echo $row->id_nota;?>" class="stretched-link text-reset badge bg-secondary bg-gradient bg-opacity-75" style="white-space: initial; overflow: hidden;text-align:left;">
                                         <font style="vertical-align: inherit;"><?php echo $row->titulo_nota;?></font>  
                                     </a>
                                 </h4>
@@ -142,7 +142,7 @@
                                         <font style="vertical-align: inherit;"><?php echo $row->categoria;?></font>
                                     </a>
                                     <h4 class="text-white fw-bolder">
-                                        <a href="notas.php?id=<?php echo $row->id_nota;?>" class="stretched-link text-reset badge bg-secondary bg-gradient bg-opacity-75" style="white-space: initial; overflow: hidden;text-align:left;">
+                                        <a href="nota.php?id=<?php echo $row->id_nota;?>" class="stretched-link text-reset badge bg-secondary bg-gradient bg-opacity-75" style="white-space: initial; overflow: hidden;text-align:left;">
                                             <font style="vertical-align: inherit;"><?php echo $row->titulo_nota;?></font>  
                                         </a>
                                     </h4>

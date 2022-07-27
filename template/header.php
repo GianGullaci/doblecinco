@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/style.css">
 
     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     
@@ -82,10 +82,10 @@
 
     <nav class="navbar navbar-expand-lg fw-bold p-0">
       <div class="container">
-        <button type="button" class="navbar-toggler" data-bs-toggle="offcanvas" data-bs-target="#MenuNavegacion">
+        <button type="button" class="navbar-toggler button-offcanvas" data-bs-toggle="offcanvas" data-bs-target="#MenuNavegacion">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div id="MenuNavegacion" class=" offcanvas offcanvas-start w-50">
+        <div id="MenuNavegacion" class=" offcanvas offcanvas-end w-50">
           <div class="offcanvas-header">
             <button type="button" class="btn-close btn-close-dark" data-bs-dismiss="offcanvas" aria-label="Close"></button>
           </div>
@@ -104,7 +104,7 @@
             ?>
 
             <l1 class="nav-item dropdown w-100">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+              <a class="nav-link dropdown-toggle" href="" role="button" data-bs-toggle="dropdown">
                 <?php echo $row->nombre_categoria;?>
               </a>
               <u1 class="dropdown-menu">
@@ -117,7 +117,7 @@
                   foreach($result2 as $row2){
                 ?>
 
-                <l1><a class="dropdown-item" href="#"><?php echo $row2->nombre_categoria;?></a></l1>
+                <l1><a class="dropdown-item" href="listado-notas.php?id=<?php echo $row2->id_categoria_notas;?>"><?php echo $row2->nombre_categoria;?></a></l1>
                 <?php
 								  }
 							  ?>
