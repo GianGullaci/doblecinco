@@ -38,7 +38,6 @@
 }
 
 .publi-nota {
-  height: 250px;
   width: 100%;
 }
 
@@ -56,12 +55,8 @@
   }
 
   .img-nota {
-    height: 300px;
+    height: 260px;
     border-radius: 2%;
-  }
-
-  .iframe {
-    width: 500px;
   }
 
   .publi-long {
@@ -70,5 +65,14 @@
 
   .publi-small {
     height: 360px;
+  }
+
+  .publi-nota {
+    height: 325px;
+  }
+
+  .texto-nota iframe{
+    width: 450px;
+    height: 250px;
   }
 }
