@@ -34,6 +34,11 @@
   filter:brightness(0.6);
 }
 
+.img-list {
+  height: 170px;
+  border-radius: 2%;
+}
+
 .card {
   border: none !important;
 }

@@ -42,24 +42,34 @@
                 order by notas.id_nota desc");
                 $result2 = $sentencia2->fetchAll(PDO::FETCH_OBJ);
                 foreach ($result2 as $row2) {
-if ($row2->imagen_celular!='') {
-    ?>
+                    $path = "img/notas/".$row2->id_nota."/".$row2->imagen_celular;
+                    if (is_file($path)) {
+            ?>
 
-            <div class="col-lg-3">
-                <div class="card">
-                    <img src="img/notas/<?php echo $row2->id_nota; ?>/<?php echo $row2->imagen_celular; ?>" class="img-small" alt="">
-                    <div class="card-img-overlay d-flex align-items-center p-3 p-sm-4">
-                        <div class="w-100 mt-auto">
-                            <a href="" class="badge bg-secondary bg-gradient mb-2 bg-opacity-75">
-                                <font style="vertical-align: inherit;"><?php echo $row2->categoria; ?></font>
-                            </a>
-                            <h4 class="text-white fw-bolder">
-                                <a href="nota.php?id=<?php echo $row2->id_nota; ?>" class="stretched-link text-reset badge bg-secondary bg-gradient bg-opacity-75" style="white-space: initial; overflow: hidden;text-align:left;">
-                                    <font style="vertical-align: inherit;"><?php echo $row2->titulo_nota; ?></font>  
+            <div class="col-lg-4 col-xs-6">
+                <div class="card border">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="img/notas/<?php echo $row2->id_nota; ?>/<?php echo $row2->imagen_celular; ?>" class="img-list rounded-start" alt="">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <a href="" class="badge bg-secondary bg-gradient bg-opacity-75">
+                                    <font style="vertical-align: inherit;"><?php echo $row2->categoria; ?></font>
                                 </a>
-                            </h4>
+                                <h4 class="text-white fw-bolder">
+                                    <a href="nota.php?id=<?php echo $row2->id_nota; ?>" class="stretched-link text-reset badge bg-secondary bg-gradient bg-opacity-75" style="white-space: initial; overflow: hidden;text-align:left;">
+                                        <font style="vertical-align: inherit;"><?php echo $row2->titulo_nota; ?></font>  
+                                    </a>
+                                </h4>
+                            </div>
                         </div>
                     </div>
+
+
+
+                    
+                    
                 </div>
             </div>
 
