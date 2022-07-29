@@ -28,14 +28,14 @@
   background-image: url(../img/nota-ppal.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: center center;
   height: 25vh;
   width: 100%;
   filter:brightness(0.6);
 }
 
 .img-list {
-  height: 170px;
+  height: 266px;
   border-radius: 2%;
 }
 
@@ -84,6 +84,11 @@
   .img-category {
     height: 150px;
     width: 100%;
+  }
+
+  .img-list {
+    height: 215px;
+    border-radius: 2%;
   }
 
   .publi-long {

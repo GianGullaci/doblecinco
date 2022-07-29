@@ -62,7 +62,7 @@
                         <img src="img/notas/<?php echo $row->id_nota;?>/<?php echo $row->imagen_celular;?>" class="img-small" alt="">
                         <div class="card-img-overlay d-flex align-items-center p-3 p-sm-4">
                             <div class="w-100 mt-auto">
-                            <a href="" class="badge bg-secondary bg-gradient mb-2 bg-opacity-75">
+                                <a href="" class="badge bg-secondary bg-gradient mb-2 bg-opacity-75">
                                     <font style="vertical-align: inherit;"><?php echo $row->categoria;?></font>
                                 </a>
                                 <h4 class="text-white fw-bolder">

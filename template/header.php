@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/style.css">
 
     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     
@@ -137,7 +137,7 @@
           <div class="row g-4 pt-2 pb-2 align-items-center w-75">
             <div class="col-4 mt-0">
               <div class="card align-items-center mt-0 mb-0">
-                <a href="">
+                <a href="posiciones.php">
                   <img class="pt-2 pb-2" src="img/logo-posiciones.png" height="50px" alt="">
                   <p class="font-weight-bold mb-0 text-dark fw-bold" style="display:inline-block;">Posiciones</p>
                 </a>
