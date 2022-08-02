@@ -75,6 +75,16 @@
   width: 100% !important;
 }
 
+.logo{
+  width: 50%;
+}
+
+@media (max-width: 1000px) {
+  .statistics{
+    width: 70% !important;
+  }
+}
+
 @media (max-width: 767px) {
   .img-long {
     height: 350px;
@@ -121,11 +131,15 @@
   }
 
   .statistics{
-    width: 75% !important;
+    width: 100% !important;
   }
 
   .offcanvas{
     width: 50% !important;
+  }
+
+  .logo{
+    width: 65%;
   }
 }
 
@@ -179,17 +193,41 @@
     height: 190px;
   }
 
-  .statistics{
-    width: 100% !important;
-  }
-
   .offcanvas{
     width: 60% !important;
+  }
+
+  .logo{
+    width: 70%;
+  }
+}
+
+@media (min-width: 440px) and (max-width: 470px) {
+  .statistics{
+    width: 80% !important;
+  }
+}
+
+@media (max-width: 440px) {
+  .statistics{
+    width: 90% !important;
+  }
+
+  .logo{
+    width: 80%;
   }
 }
 
 @media (max-width: 380px) {
   .logo {
     width: 280px;
+  }
+
+  .statistics{
+    width: 96% !important;
+  }
+
+  .logo{
+    width: 85%;
   }
 }
