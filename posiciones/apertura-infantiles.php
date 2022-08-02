@@ -20,7 +20,6 @@ $result_general2 = $mysqli->query($query_general2);
 $started_cascara = false;
 
 $padre="";
-$class="li-verde";
 
 while($row_general2 = mysqli_fetch_array($result_general2)) {
 	if (!$started_cascara){
@@ -32,24 +31,16 @@ while($row_general2 = mysqli_fetch_array($result_general2)) {
 			$style="style='display:block;'";
 			$comienzan_desplegables=true;
 		}
-		else{
-			$funcion = "mostrarocultar('tab-containerpos".$fase."'); return false;";
-// 			echo '<h3 class="col-1-1 mostrarocultar-posiciones"  onclick="'.$funcion.'"><span>+</span>&nbsp;&nbsp;&nbsp;Infantiles. Fase 2: Apertura. </h3>';
-			echo '<h3 class="col-1-1 mostrarocultar-posiciones"  onclick="'.$funcion.'"><span>+</span>&nbsp;&nbsp;&nbsp;Menores. Fase 2. </h3>';
-		}
-		echo '
-			<div id="tab-containerpos'.$fase.'" class="tab-container col-1-1" '.$style.'>  
-				<ul class="tab-nav col-1-5 ulcategorias">';
+		echo '<button class="nav-link active" id="v-pills-general-tab" data-bs-toggle="pill" data-bs-target="#v-pills-general" type="button" role="tab" aria-controls="v-pills-general" aria-selected="true">General</button>
 		
-		echo '<div class="li-padre" >'.$row_general2['nombre_categoria_padre'].'</div>
-		      <li class=" active '.$class.'" data-tab="'.$fase.'-posiciones-'.$row_general2['nombre_categoria_padre'].'">General</li>
-		      <li class=" '.$class.'" data-tab="'.$fase.'-posiciones-'.$row_general2['nombre_categoria'].'">'.$row_general2['nombre_categoria'].'</li>';
+		      <div class="fw-bold text-center" >'.$row_general2['nombre_categoria_padre'].'</div>
+			  <button class="nav-link" id="v-pills-'.$fase.'-posiciones-'.$row_general2['nombre_categoria'].'-tab" data-bs-toggle="pill" data-bs-target="#v-pills-'.$fase.'-posiciones-'.$row_general2['nombre_categoria'].'" type="button" role="tab" aria-controls="v-pills-'.$fase.'-posiciones-'.$row_general2['nombre_categoria'].'" aria-selected="false">'.$row_general2['nombre_categoria'].'</button>';
 			
 		
 		$padre = $row_general2['nombre_categoria_padre'];
 	}
 	else{
-		echo '<li class="'.$class.'" data-tab="'.$fase.'-posiciones-'.$row_general2['nombre_categoria'].'">'.$row_general2['nombre_categoria'].'</li>';
+		echo '<button class="nav-link" id="v-pills-'.$fase.'-posiciones-'.$row_general2['nombre_categoria'].'-tab" data-bs-toggle="pill" data-bs-target="#v-pills-'.$fase.'-posiciones-'.$row_general2['nombre_categoria'].'" type="button" role="tab" aria-controls="v-pills-'.$fase.'-posiciones-'.$row_general2['nombre_categoria'].'" aria-selected="false">'.$row_general2['nombre_categoria'].'</button>';
 	}
 	$started_cascara=true;
 }
@@ -57,10 +48,10 @@ while($row_general2 = mysqli_fetch_array($result_general2)) {
 if ($started_cascara){
 
 // 	$leyenda="General corresponde a la suma de Octava, Novena, Décima y Predécima";
-	$leyenda="General corresponde a la suma de Octava, Novena, Décima y Predécima";
+	$leyenda="General corresponde a la suma de Séptima, Octava y Novena";
 	
-	echo '<li class="li-nota">'.$leyenda.'</li>';
-	echo '</ul>';
+	echo '<li>'.$leyenda.'</li>';
+	echo '</ul></div>';
 
 }
 
@@ -86,17 +77,14 @@ while($row_general2 = mysqli_fetch_array($result_general2)) {
 
 	if (!$started_cascara){
 	
-		echo '<div class="tab-contents col-4-5 last" style="">';
-		$general=false;
-		$id_padre=0;
-		
 		// como estoy en la fase 2, debo armar el TAB para la tabla general de Infantiles
 		$padre=$row_general2['nombre_categoria_padre'];
 		echo '<h3 data-tab="'.$fase.'-posiciones-'.$row_general2['nombre_categoria_padre'].'" class="v_nav">'.$row_general2['nombre_categoria_padre'].'</h3>';
-		echo '<div class="tab_content" id="'.$fase.'-posiciones-'.$row_general2['nombre_categoria_padre'].'">';
+		echo '<div class="tab-pane fade show active" id="v-pills-general" role="tabpanel" aria-labelledby="v-pills-general-tab">';
 			$id_padre=$row_general2['id_categoria_padre'];
+		echo '<div class="row">';
 			include("posiciones/panel-posiciones.php");
-		echo '</div>';
+		echo '</div></div>';
 	
 		$id_padre=0;
 		
@@ -104,21 +92,21 @@ while($row_general2 = mysqli_fetch_array($result_general2)) {
 		echo '<h3 data-tab="'.$fase.'-posiciones-'.$row_general2['nombre_categoria'].'" class="v_nav ">'.$row_general2['nombre_categoria'].'</h3>';
 	}
 	else {
-
+		echo '<div class="tab-pane fade" id="v-pills-'.$fase.'-posiciones-'.$row_general2['nombre_categoria'].'" role="tabpanel" aria-labelledby="v-pills-'.$fase.'-posiciones-'.$row_general2['nombre_categoria'].'-tab">';
 		
 		echo '<h3 data-tab="'.$fase.'-posiciones-'.$row_general2['nombre_categoria'].'" class="v_nav">'.$row_general2['nombre_categoria'].'</h3>';
 	}
 	
-		echo '<div class="tab_content" id="'.$fase.'-posiciones-'.$row_general2['nombre_categoria'].'">';
+		echo '<div class="row">';
 			include("posiciones/panel-posiciones.php");
-		echo '</div>';
+		echo '</div></div>';
 	
 	$started_cascara=true;
 }
 
 if ($started_cascara){
 
-	echo '</div></div>';
+	echo '</div></div></div>';
 
 }
 ?>

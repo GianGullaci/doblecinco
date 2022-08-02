@@ -19,7 +19,6 @@ $result_general2 = $mysqli->query($query_general2);
 $started_cascara = false;
 
 $padre="";
-$class="";
 
 while($row_general2 = mysqli_fetch_array($result_general2)) {
 	if (!$started_cascara){
@@ -31,6 +30,10 @@ while($row_general2 = mysqli_fetch_array($result_general2)) {
 			$style="style='display:block;'";
 			$comienzan_desplegables=true;
 		}
+		/*else
+			$funcion = "mostrarocultar('tab-containerpos".$fase."'); return false;";
+			echo '<h3 class="mostrarocultar-posiciones" onclick="'.$funcion.'"><span>+</span>&nbsp;&nbsp;&nbsp;Posiciones en fase 1</h3>';
+		}*/
 		echo '
 			<div class="d-flex">  
 				<div class="nav flex-column nav-pills me-4" style="width:20%" id="v-pills-tab" role="tablist" aria-orientation="vertical">';
@@ -45,7 +48,6 @@ while($row_general2 = mysqli_fetch_array($result_general2)) {
 	}
 	else{
 		if ($padre!=$row_general2['nombre_categoria_padre']){
-			$class="li-verde";
 			$padre=$row_general2['nombre_categoria_padre'];
 			echo '<div class="fw-bold text-center">'.$row_general2['nombre_categoria_padre'].'</div>';
 		}
@@ -58,7 +60,7 @@ if ($started_cascara){
 
 	$leyenda="General corresponde a la suma de las 6 categorías";
 	
-	echo '<li class="">'.$leyenda.'</li>';
+	echo '<li>'.$leyenda.'</li>';
 	echo '</ul></div>';
 
 }
