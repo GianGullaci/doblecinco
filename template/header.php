@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/styles.css">
 
     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     
@@ -58,7 +58,7 @@
   <header class="navbar-light navbar-sticky header-static bg-white">
     <nav class="navbar navbar-expand-lg p-0">
         <div class="container">
-            <a class="navbar-brand" href="index.php"><img width="300px" src="img/home/logo3_pc.png" /></a>
+            <a class="navbar-brand" href="index.php"><img class="logo" width="300px" src="img/home/logo3_pc.png" /></a>
             <div class="navbar-item d-none d-xl-block">
             <div class="nav-item text-muted" id="current_date">
               <script>
@@ -83,7 +83,7 @@
         <button type="button" class="navbar-toggler button-offcanvas" data-bs-toggle="offcanvas" data-bs-target="#MenuNavegacion">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div id="MenuNavegacion" class=" offcanvas offcanvas-end w-50">
+        <div id="MenuNavegacion" class=" offcanvas offcanvas-end">
           <div class="offcanvas-header">
             <button type="button" class="btn-close btn-close-dark" data-bs-dismiss="offcanvas" aria-label="Close"></button>
           </div>
@@ -134,7 +134,7 @@
     <div style="background: #29A8FF">
       <div class="container">
         <center style="padding: 0px 0px 0px 0px;">
-          <div class="row g-4 pt-2 pb-2 align-items-center w-75">
+          <div class="row g-4 pt-2 pb-2 align-items-center statistics">
             <div class="col-4 mt-0">
               <div class="card align-items-center mt-0 mb-0">
                 <a href="posiciones.php">

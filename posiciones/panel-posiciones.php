@@ -44,14 +44,7 @@
 	
 ?>
 	
-	<!-- Responsive Table Heading Labels -->
-	
+	<?php
+ 		include("posiciones/tabla-posiciones_pc.php");
 
-	<div class="tab-contents">
-		<div class="main-content col-1-1">
-		<?php
- 			include("posiciones/tabla-posiciones_".$dispositivo.".php");
-
-		?>						
-		</div>
-	</div>
+	?>

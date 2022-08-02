@@ -1,12 +1,12 @@
 <?php
 
-echo '
-	<h1 class="titulo-fase">'.$titulo.'. '.$subtitulo1.'</h1>
-	<table class="table-style-1 tabla-fixture">
+echo '<div class="col-lg-6 col-12">
+	<h4 class="">'.$titulo.'. '.$subtitulo1.'</h4>
+	<table class="table table-bordered">
 		<thead>
 		<tr>
 			<th colspan="2">'.$entidad.'</th>
-			<th>Puntos</th>
+			<th>Pts</th>
 			<th>PJ</th>
 			<th>G</th>
 			<th>E</th>
@@ -19,8 +19,6 @@ echo '
 ';
 			
 
-						
-// 	$query_resultado = 
 		$query_resultado = 
 			"select id_torneo, ".$select_equipos." todos1.clubes_id_club, todos1.logo_club, todos1.categorias_id_categoria, 
 		      sum(todos1.ganados) as ganados,
@@ -68,12 +66,8 @@ echo '
 		      ".$group_todos." 
 		      order by total_puntos_con_sansion desc
 		";
-           		//				   echo $query_resultado;
-           	//					   exit;
 			
 	$result_resultado = $mysqli->query($query_resultado); 
-// 	$id_sancion=0;
-// 	$sanciones=array();
 	
 	
 	$arreglo_renglones=array();
@@ -146,7 +140,6 @@ echo '
 				  
 				   ) as tabla
 				  ";
-// 				  echo $query_goles;
 			}
 			else if  ($id_padre<>0){
 				$query_goles = "
@@ -355,24 +348,6 @@ echo '
 			
 			$diferencia_de_goles= abs($goles_contra-$goles_favor);
 			
-			/*
-			$arreglo_renglones[$row_resultado['clubes_id_club']]['id_equipo'] = $row_resultado['id_equipo'];
-			$arreglo_renglones[$row_resultado['clubes_id_club']]['clubes_id_club'] = $row_resultado['clubes_id_club'];
-			$arreglo_renglones[$row_resultado['clubes_id_club']]['logo_club'] = $row_resultado['logo_club'];
-			$arreglo_renglones[$row_resultado['clubes_id_club']]['nombre_equipo'] = $row_resultado['nombre_equipo'];
-			$arreglo_renglones[$row_resultado['clubes_id_club']]['total_puntos'] = $row_resultado['total_puntos'];
-			$arreglo_renglones[$row_resultado['clubes_id_club']]['jugados'] = $row_resultado['jugados'];
-			$arreglo_renglones[$row_resultado['clubes_id_club']]['ganados'] = $row_resultado['ganados'];
-			$arreglo_renglones[$row_resultado['clubes_id_club']]['empatados'] = $row_resultado['empatados'];
-			$arreglo_renglones[$row_resultado['clubes_id_club']]['perdidos'] = $row_resultado['perdidos'];
-			$arreglo_renglones[$row_resultado['clubes_id_club']]['goles_favor'] = $goles_favor;
-			$arreglo_renglones[$row_resultado['clubes_id_club']]['goles_contra'] = $goles_contra;
-			$arreglo_renglones[$row_resultado['clubes_id_club']]['diferencia_de_goles'] = $diferencia_de_goles;
-			$arreglo_renglones[$row_resultado['clubes_id_club']]['total_puntos_con_sansion'] = $row_resultado['total_puntos_con_sansion'];
-			$arreglo_renglones[$row_resultado['clubes_id_club']]['tiene_sancion'] = $row_resultado['tiene_sancion'];
-			$arreglo_renglones[$row_resultado['clubes_id_club']]['comentarios_sancion'] = $row_resultado['comentarios_sancion'];
-			*/
-			$arreglo_renglones[$row_resultado['nombre_equipo']]['id_equipo'] = $row_resultado['id_equipo'];
 			$arreglo_renglones[$row_resultado['nombre_equipo']]['clubes_id_club'] = $row_resultado['clubes_id_club'];
 			$arreglo_renglones[$row_resultado['nombre_equipo']]['logo_club'] = $row_resultado['logo_club'];
 			$arreglo_renglones[$row_resultado['nombre_equipo']]['nombre_equipo'] = $row_resultado['nombre_equipo'];
@@ -388,7 +363,6 @@ echo '
 			$arreglo_renglones[$row_resultado['nombre_equipo']]['tiene_sancion'] = $row_resultado['tiene_sancion'];
 			$arreglo_renglones[$row_resultado['nombre_equipo']]['comentarios_sancion'] = $row_resultado['comentarios_sancion'];
 			
-			//$diferencia_de_goles_anterior = $diferencia_de_goles;
 		}
 		
 		
@@ -396,7 +370,6 @@ echo '
 			//ahora ordenamos el array
 			$sort = array();
 			foreach($arreglo_renglones as $k=>$v) {
-// 			    $sort['total_puntos'][$k] = $v['total_puntos'];
 			    $sort['total_puntos_con_sansion'][$k] = $v['total_puntos_con_sansion'];
 			    $sort['diferencia_de_goles'][$k] = $v['diferencia_de_goles'];
 			    $sort['goles_favor'][$k] = $v['goles_favor'];
@@ -418,10 +391,9 @@ echo '
 					
 						<tr>
 							<td>
-								  <img src="../images/clubes/'.$renglon['clubes_id_club'].'/'.$renglon['logo_club'].'" width="24" /></td><td>
+								  <img src="img/clubes/'.$renglon['clubes_id_club'].'/'.$renglon['logo_club'].'" width="24" /></td><td>
 								  '.$renglon['nombre_equipo'];
 					if ($renglon['tiene_sancion']){
-					  //echo "*";
 					  $id_sancion++;
 					  $sanciones[$id_sancion]=$renglon['comentarios_sancion'];
 					  echo "<sup>(".$id_sancion.")</sup>";
@@ -446,7 +418,7 @@ echo '
 					
 						<tr>
 							<td>
-								  <img src="../images/clubes/'.$renglon['clubes_id_club'].'/'.$renglon['logo_club'].'" width="24" /></td><td>
+								  <img src="img/clubes/'.$renglon['clubes_id_club'].'/'.$renglon['logo_club'].'" width="24" /></td><td>
 								  '.$renglon['nombre_equipo'];
 					if ($renglon['tiene_sancion']){
 					  $id_sancion++;
@@ -455,11 +427,11 @@ echo '
 					}
 					echo		'</td>
 							<td>'.$renglon['total_puntos_con_sansion'].'</td>
-							<td>'. $renglon['jugados'].' <a class="link-ficha" href="jugados.php?id='.$renglon['id_equipo'].'&torneo_infantiles='.$torneo_infantiles.'&torneo_menores='.$torneo_menores.'&fase='.$fase.'&fase2='.$fase2.'&zona=A">+</a></td>
-							<td>'.$renglon['ganados'].' <a class="link-ficha" href="ganados.php?id='.$renglon['id_equipo'].'&torneo_infantiles='.$torneo_infantiles.'&torneo_menores='.$torneo_menores.'&fase='.$fase.'&fase2='.$fase2.'&zona=A">+</a></td>
-							<td>'. $renglon['empatados'].' <a class="link-ficha" href="empatados.php?id='.$renglon['id_equipo'].'&torneo_infantiles='.$torneo_infantiles.'&torneo_menores='.$torneo_menores.'&fase='.$fase.'&fase2='.$fase2.'&zona=A">+</a></td>
-							<td>'.$renglon['perdidos'].' <a class="link-ficha" href="perdidos.php?id='.$renglon['id_equipo'].'&torneo_infantiles='.$torneo_infantiles.'&torneo_menores='.$torneo_menores.'&fase='.$fase.'&fase2='.$fase2.'&zona=A">+</a></td>
-							<td>'.$renglon['goles_favor'].' <a class="link-ficha" href="goles.php?id='.$renglon['id_equipo'].'&torneo_infantiles='.$torneo_infantiles.'&torneo_menores='.$torneo_menores.'&fase='.$fase.'&fase2='.$fase2.'&zona=A">+</a></td>
+							<td>'. $renglon['jugados'].' </td>
+							<td>'.$renglon['ganados'].' </td>
+							<td>'. $renglon['empatados'].' </td>
+							<td>'.$renglon['perdidos'].' </td>
+							<td>'.$renglon['goles_favor'].' </td>
 							<td>'.$renglon['goles_contra'].'</td>
 						</tr>
 					
@@ -469,9 +441,7 @@ echo '
 			
 			}
  			if ($id_sancion>=1){
- 			  //for($i=1;$i++;$i<=$id_sancion){
  			  foreach ($sanciones as $ind=>$valor){
-			    //echo $ind.": ".$valor."<br>";
  			    echo "<tr><td colspan='9'><sup>(".$ind.")</sup> ".$valor."</td></tr>";
  			  }
   			}
@@ -484,15 +454,16 @@ echo '
 
 			</tbody>
 		</table>
-		
+	</div>
 	<?php
 	
-	echo '<h1 class="titulo-fase">'.$titulo.'. '.$subtitulo2.'</h1>
-		<table class="table-style-1  tabla-fixture">
+	echo '<div class="col-lg-6 col-12">
+		<h4 class="">'.$titulo.'. '.$subtitulo2.'</h4>
+		<table class="table table-bordered">
 			<thead>
 			<tr>
 				<th colspan="2">'.$entidad.'</th>
-				<th>Puntos</th>
+				<th>Pts</th>
 				<th>PJ</th>
 				<th>G</th>
 				<th>E</th>
@@ -552,8 +523,6 @@ echo '
 		      ".$group_todos." 
 		      order by total_puntos_con_sansion desc
 		";
-	//echo $query_resultado;
-	//exit;
 	$result_resultado = $mysqli->query($query_resultado); 
 	$arreglo_renglones=array();
 	
@@ -627,9 +596,6 @@ echo '
 				  
 				   ) as tabla
 				  ";
-				  //echo $query_goles;
-				  //exit;
-				  //liniers B 44
 			}
 			else if  ($id_padre<>0){
 				$query_goles = "
@@ -669,7 +635,6 @@ echo '
 				  ) as tabla
 				  
 				  ";
-//  				  echo $query_contra;
 			
 			}
 			else{
@@ -754,9 +719,6 @@ echo '
 				  
 				   ) as tabla
 				  ";
-				  //echo $query_contra;
-				  //exit;
-				  //liniers B 2
 			}
 			else if  ($id_padre<>0){
 				$query_contra = "
@@ -796,7 +758,6 @@ echo '
 				  ) as tabla
 				  
 				  ";
-//  				  echo $query_contra;
 			
 			}
 			else{
@@ -844,24 +805,7 @@ echo '
 			
 			$diferencia_de_goles= abs($goles_contra-$goles_favor);
 			
-			/*$arreglo_renglones[$row_resultado['clubes_id_club']]['nombre_equipo'] = $row_resultado['nombre_equipo'];
-			$arreglo_renglones[$row_resultado['clubes_id_club']]['id_equipo'] = $row_resultado['id_equipo'];
-			$arreglo_renglones[$row_resultado['clubes_id_club']]['clubes_id_club'] = $row_resultado['clubes_id_club'];
-			$arreglo_renglones[$row_resultado['clubes_id_club']]['logo_club'] = $row_resultado['logo_club'];
-			$arreglo_renglones[$row_resultado['clubes_id_club']]['total_puntos'] = $row_resultado['total_puntos'];
-			$arreglo_renglones[$row_resultado['clubes_id_club']]['jugados'] = $row_resultado['jugados'];
-			$arreglo_renglones[$row_resultado['clubes_id_club']]['ganados'] = $row_resultado['ganados'];
-			$arreglo_renglones[$row_resultado['clubes_id_club']]['empatados'] = $row_resultado['empatados'];
-			$arreglo_renglones[$row_resultado['clubes_id_club']]['perdidos'] = $row_resultado['perdidos'];
-			$arreglo_renglones[$row_resultado['clubes_id_club']]['goles_favor'] = $goles_favor;
-			$arreglo_renglones[$row_resultado['clubes_id_club']]['goles_contra'] = $goles_contra;
-			$arreglo_renglones[$row_resultado['clubes_id_club']]['diferencia_de_goles'] = $diferencia_de_goles;
-			$arreglo_renglones[$row_resultado['clubes_id_club']]['total_puntos_con_sansion'] = $row_resultado['total_puntos_con_sansion'];
-			$arreglo_renglones[$row_resultado['clubes_id_club']]['tiene_sancion'] = $row_resultado['tiene_sancion'];
-			$arreglo_renglones[$row_resultado['clubes_id_club']]['comentarios_sancion'] = $row_resultado['comentarios_sancion'];*/
-			
 			$arreglo_renglones[$row_resultado['nombre_equipo']]['nombre_equipo'] = $row_resultado['nombre_equipo'];
-			$arreglo_renglones[$row_resultado['nombre_equipo']]['id_equipo'] = $row_resultado['id_equipo'];
 			$arreglo_renglones[$row_resultado['nombre_equipo']]['clubes_id_club'] = $row_resultado['clubes_id_club'];
 			$arreglo_renglones[$row_resultado['nombre_equipo']]['logo_club'] = $row_resultado['logo_club'];
 			$arreglo_renglones[$row_resultado['nombre_equipo']]['total_puntos'] = $row_resultado['total_puntos'];
@@ -876,11 +820,6 @@ echo '
 			$arreglo_renglones[$row_resultado['nombre_equipo']]['tiene_sancion'] = $row_resultado['tiene_sancion'];
 			$arreglo_renglones[$row_resultado['nombre_equipo']]['comentarios_sancion'] = $row_resultado['comentarios_sancion'];
 			
-			
-			//$diferencia_de_goles_anterior = $diferencia_de_goles;
-			//print_r($arreglo_renglones);
-			//exit;
-			//liniers B completo
 		}
 		
 		if (!empty($arreglo_renglones)){
@@ -889,7 +828,6 @@ echo '
 			$sort = array();
 			
 			foreach($arreglo_renglones as $k=>$v) {
-// 			    $sort['total_puntos'][$k] = $v['total_puntos'];
 			    $sort['total_puntos_con_sansion'][$k] = $v['total_puntos_con_sansion'];
 			    $sort['diferencia_de_goles'][$k] = $v['diferencia_de_goles'];
 			    $sort['goles_favor'][$k] = $v['goles_favor'];
@@ -906,16 +844,13 @@ echo '
 			
 			foreach ($arreglo_renglones as $renglon){
 				
-				
-				
-
 				if ($general or $id_padre<>0){
 				
 					echo '
 					
 						<tr>
 							<td>
-								  <img src="../images/clubes/'.$renglon['clubes_id_club'].'/'.$renglon['logo_club'].'" width="24" /></td><td>
+								  <img src="img/clubes/'.$renglon['clubes_id_club'].'/'.$renglon['logo_club'].'" width="24" /></td><td>
 								  '.$renglon['nombre_equipo'];
 							if ($renglon['tiene_sancion']){
 							  
@@ -942,7 +877,7 @@ echo '
 					
 						<tr>
 							<td>
-								  <img src="../images/clubes/'.$renglon['clubes_id_club'].'/'.$renglon['logo_club'].'" width="24" /></td><td>
+								  <img src="img/clubes/'.$renglon['clubes_id_club'].'/'.$renglon['logo_club'].'" width="24" /></td><td>
 								  '.$renglon['nombre_equipo'];
 							if ($renglon['tiene_sancion']){
 							  
@@ -953,11 +888,11 @@ echo '
 							}
 					echo '		</td>
 							<td>'.$renglon['total_puntos_con_sansion'].'</td>
-							<td>'. $renglon['jugados'].' <a class="link-ficha" href="jugados.php?id='.$renglon['id_equipo'].'&torneo_infantiles='.$torneo_infantiles.'&torneo_menores='.$torneo_menores.'&fase='.$fase.'&fase2='.$fase2.'&zona=B">+</a></td>
-							<td>'.$renglon['ganados'].' <a class="link-ficha" href="ganados.php?id='.$renglon['id_equipo'].'&torneo_infantiles='.$torneo_infantiles.'&torneo_menores='.$torneo_menores.'&fase='.$fase.'&fase2='.$fase2.'&zona=B">+</a></td>
-							<td>'. $renglon['empatados'].' <a class="link-ficha" href="empatados.php?id='.$renglon['id_equipo'].'&torneo_infantiles='.$torneo_infantiles.'&torneo_menores='.$torneo_menores.'&fase='.$fase.'&fase2='.$fase2.'&zona=B">+</a></td>
-							<td>'.$renglon['perdidos'].' <a class="link-ficha" href="perdidos.php?id='.$renglon['id_equipo'].'&torneo_infantiles='.$torneo_infantiles.'&torneo_menores='.$torneo_menores.'&fase='.$fase.'&fase2='.$fase2.'&zona=B">+</a></td>
-							<td>'.$renglon['goles_favor'].' <a class="link-ficha" href="goles.php?id='.$renglon['id_equipo'].'&torneo_infantiles='.$torneo_infantiles.'&torneo_menores='.$torneo_menores.'&fase='.$fase.'&fase2='.$fase2.'&zona=B">+</a></td>
+							<td>'. $renglon['jugados'].' </td>
+							<td>'.$renglon['ganados'].' </td>
+							<td>'. $renglon['empatados'].' </td>
+							<td>'.$renglon['perdidos'].' </td>
+							<td>'.$renglon['goles_favor'].' </td>
 							<td>'.$renglon['goles_contra'].'</td>
 						</tr>
 					
@@ -967,9 +902,7 @@ echo '
 			}
 			
 			if ($id_sancion>=1){
- 			  //for($i=1;$i++;$i<=$id_sancion){
  			  foreach ($sanciones as $ind=>$valor){
-			    //echo $ind.": ".$valor."<br>";
  			    echo "<tr><td colspan='9'><sup>(".$ind.")</sup> ".$valor."</td></tr>";
  			  }
   			}
@@ -981,3 +914,4 @@ echo '
 
 			</tbody>
 		</table>
+	</div>

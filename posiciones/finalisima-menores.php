@@ -6,14 +6,16 @@
 */
 
 
-$sentencia_general2 = $bd -> query("select padre.id_categoria AS id_categoria_padre,padre.nombre_categoria AS nombre_categoria_padre,
-cat.id_categoria AS id_categoria,cat.nombre_categoria AS nombre_categoria,
-cat.diferencia AS diferencia 
-from categorias as cat 
-join categorias as padre on cat.categorias_id_categoria = padre.id_categoria 
-where padre.id_categoria=1 
-group by cat.id_categoria order by diferencia desc ");   
-$result_general2 = $sentencia_general2->fetchall(PDO::FETCH_OBJ);
+$query_general2 = "
+	select padre.id_categoria AS id_categoria_padre,padre.nombre_categoria AS nombre_categoria_padre,
+	cat.id_categoria AS id_categoria,cat.nombre_categoria AS nombre_categoria,
+	cat.diferencia AS diferencia 
+	from categorias as cat 
+	join categorias as padre on cat.categorias_id_categoria = padre.id_categoria 
+	where padre.id_categoria=1 
+	group by cat.id_categoria order by diferencia desc ";
+			
+$result_general2 = $mysqli->query($query_general2); 
 $started_cascara = false;
 
 $padre="";
