@@ -3,7 +3,7 @@
 <?php
 
 	//seleccionamos el torneo que se setea en el admin
-	include_once "adminviejo/includes/coneccion.php";
+	include_once "model/coneccion.php";
 	$query = "select *
 		FROM  configuracion_home";
 	$torneos=false;

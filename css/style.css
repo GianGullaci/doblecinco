@@ -71,6 +71,10 @@
   width: 30% !important;
 }
 
+.tab-content{
+  width: 100% !important;
+}
+
 @media (max-width: 767px) {
   .img-long {
     height: 350px;

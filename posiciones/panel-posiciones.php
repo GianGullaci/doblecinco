@@ -45,6 +45,6 @@
 ?>
 	
 	<?php
- 		include("posiciones/tabla-posiciones_pc.php");
+ 		include("posiciones/tabla-posiciones.php");
 
 	?>
