@@ -145,7 +145,7 @@
             </div>
             <div class="col-4 mt-0">
               <div class="card align-items-center mt-0 mb-0">
-                <a href="">
+                <a href="goleadores.php">
                   <img class="pt-2 pb-2" src="img/logo-goleadores.png" height="50px" alt="">
                   <p class="font-weight-bold mb-0 text-dark fw-bold" style="display:inline-block;">Goleadores</p>
                 </a>
