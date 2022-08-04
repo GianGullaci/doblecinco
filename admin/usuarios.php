@@ -2,7 +2,7 @@
 
 <?php
     include_once "../model/conexion.php";
-    $sentencia = $bd -> query( "select * from admin");
+    $sentencia = $bd -> query( "select * from administradores");
     $admin = $sentencia->fetchAll(PDO::FETCH_OBJ);
 ?>
 
@@ -91,8 +91,8 @@
                             <tr>
                                 <td><?php echo $dato->nombre; ?></td>
                                 <td><?php echo $dato->nombre_usuario; ?></td>
-                                <td><a class="text-success" href="editar-usuario.php?id_admin=<?php echo $dato->id_admin;?>"><i class="bi bi-pencil-square"></i></a></td>
-                                <td><a onclick="return confirm('Estás seguro de eliminar?');" class="text-danger" href="eliminar-usuario.php?id_admin=<?php echo $dato->id_admin;?>"><i class="bi bi-trash-fill"></i></a></td>
+                                <td><a class="text-success" href="editar-usuario.php?id_admin=<?php echo $dato->id_administrador;?>"><i class="bi bi-pencil-square"></i></a></td>
+                                <td><a onclick="return confirm('Estás seguro de eliminar?');" class="text-danger" href="eliminar-usuario.php?id_admin=<?php echo $dato->id_administrador;?>"><i class="bi bi-trash-fill"></i></a></td>
                             </tr>
 
                             <?php

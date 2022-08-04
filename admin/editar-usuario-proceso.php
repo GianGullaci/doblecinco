@@ -10,10 +10,10 @@
     $nombre_usuario = $_POST['txtUsuario'];
     $contraseña = $_POST['txtContraseña'];
 
-    $sentencia = $bd->prepare("UPDATE admin SET 
+    $sentencia = $bd->prepare("UPDATE administradores SET 
                                 nombre_usuario = ?, 
-                                contraseña = ?,
-                                nombre = ? where id_admin = ?;");
+                                password = ?,
+                                nombre = ? where id_administrador = ?;");
     $resultado = $sentencia->execute([$nombre_usuario,$contraseña,$nombre,$id_admin]);
 
     if ($resultado === TRUE) {

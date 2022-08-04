@@ -9,7 +9,7 @@
     include_once '../model/conexion.php';
     $id_admin = $_GET['id_admin'];
 
-    $sentencia = $bd->prepare("select * from admin where id_admin = ?;");
+    $sentencia = $bd->prepare("select * from administradores where id_administrador = ?;");
     $sentencia->execute([$id_admin]);
     $admin = $sentencia->fetch(PDO::FETCH_OBJ);
 ?>
@@ -28,10 +28,10 @@
                         <label class="form-label">Usuario: </label>
                         <input type="text" class="form-control" name="txtUsuario" autofocus required value="<?php echo $admin->nombre_usuario; ?>">
                         <label class="form-label">Contraseña: </label>
-                        <input type="password" class="form-control" name="txtContraseña" autofocus required value="<?php echo $admin->contraseña; ?>">
+                        <input type="password" class="form-control" name="txtContraseña" autofocus required value="<?php echo $admin->password; ?>">
                     </div>
                     <div class="d-grid">
-                        <input type="hidden" name="id_admin" value="<?php echo $admin->id_admin; ?>">
+                        <input type="hidden" name="id_admin" value="<?php echo $admin->id_administrador; ?>">
                         <input type="submit" class="btn btn-primary" value="Guardar">
                     </div>
                 </form>

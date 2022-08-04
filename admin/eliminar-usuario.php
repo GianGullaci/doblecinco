@@ -7,7 +7,7 @@
     include '../model/conexion.php';
     $id_admin = $_GET['id_admin'];
 
-    $sentencia = $bd->prepare("DELETE FROM admin where id_admin = ?;");
+    $sentencia = $bd->prepare("DELETE FROM administradores where id_administrador = ?;");
     $resultado = $sentencia->execute([$id_admin]);
 
     if ($resultado === TRUE) {
