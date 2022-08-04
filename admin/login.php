@@ -36,8 +36,8 @@
                     <input type="text" class="form-control" id="usuario" name="usuario">
                 </div>
                 <div class="mb-3">
-                    <label for="contaseña" class="form-label">Contaseña</label>
-                    <input type="password" class="form-control" id="contaseña" name="contraseña">
+                    <label for="contraseña" class="form-label">Contaseña</label>
+                    <input type="password" class="form-control" id="contraseña" name="contraseña">
                 </div>
                 <button type="submit" class="btn btn-primary">Ingresar</button>
             </form>

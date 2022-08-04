@@ -39,7 +39,7 @@ while($row_general2 = mysqli_fetch_array($result_general2)) {
 				<div class="nav flex-column nav-pills me-4" style="width:20%" id="v-pills-tab" role="tablist" aria-orientation="vertical">';
 		
 		//como estoy en la fase 1 debo mostrar ademas la tabla general
-		echo '<button class="nav-link active" id="v-pills-general-tab" data-bs-toggle="pill" data-bs-target="#v-pills-general" type="button" role="tab" aria-controls="v-pills-general" aria-selected="true">General</button>
+		echo '<button class="nav-link active" id="v-pills-general-fase1-tab" data-bs-toggle="pill" data-bs-target="#v-pills-general-fase1" type="button" role="tab" aria-controls="v-pills-general-fase1" aria-selected="true">General</button>
 		
 		      <div class="fw-bold text-center" >'.$row_general2['nombre_categoria_padre'].'</div>
 			  <button class="nav-link" id="v-pills-'.$fase.'-posiciones-'.$row_general2['nombre_categoria'].'-tab" data-bs-toggle="pill" data-bs-target="#v-pills-'.$fase.'-posiciones-'.$row_general2['nombre_categoria'].'" type="button" role="tab" aria-controls="v-pills-'.$fase.'-posiciones-'.$row_general2['nombre_categoria'].'" aria-selected="false">'.$row_general2['nombre_categoria'].'</button>';
@@ -89,7 +89,7 @@ while($row_general2 = mysqli_fetch_array($result_general2)) {
 		
 		//como estoy en la fase 1, el primer TAB es el General
 		
-		echo '<div class="tab-pane fade show active" id="v-pills-general" role="tabpanel" aria-labelledby="v-pills-general-tab">';
+		echo '<div class="tab-pane fade show active" id="v-pills-general-fase1" role="tabpanel" aria-labelledby="v-pills-general-fase1-tab">';
 		echo '<div class="row">';
 		include("posiciones/panel-posiciones.php");
 		echo '</div></div>';

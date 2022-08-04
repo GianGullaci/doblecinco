@@ -140,8 +140,21 @@
                 }
             ?>
 
-                        
+
             </div>
+
+            <?php
+			    //si estoy en todos los numeros tengo que mostrar las estadisticas
+			    if ($row->id_categoria==23){
+				    include("posiciones-t-l-n.php");
+                    include("fixture-t-l-n.php");
+                    include("goleadores-t-l-n.php");
+			    }
+		    ?>
+
+            <?php
+				if ($row->id_categoria!=23){
+            ?>
             <div class="col-lg-3">
                 <div class="row g-4">
             <?php
@@ -160,11 +173,12 @@
                 
                 <div class="col-lg-12 col-md-6">
                     <div class="card pb-3">
-                        <a href="<?php echo $row->link_publicidad;?>" target="_blank"><img src="img/publicidades/<?php echo $row->id_publicidad;?>/<?php echo $row->archivo_publicidad;?>" class="publi-nota"></a>
+                        <a href="<?php echo $row->link_publicidad; ?>" target="_blank"><img src="img/publicidades/<?php echo $row->id_publicidad; ?>/<?php echo $row->archivo_publicidad; ?>" class="publi-nota"></a>
                     </div>
                 </div>
 
             <?php
+                }
                 }
             ?>
 
@@ -175,6 +189,7 @@
 
             </div>
         </div>
+
     </div>
 </section>
 
