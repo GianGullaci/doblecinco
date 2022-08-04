@@ -7,8 +7,8 @@
 ?>
 
 <div class="container my-5">
-    <div class="row justify-content-center">
-        <div class="col-md-7">
+    <div class="row justify-content-center g-4">
+        <div class="col-lg-8">
 
             <!-- inicio alerta-->
             
@@ -74,7 +74,7 @@
                 <div class="card-header">
                     Lista de Administradores
                 </div>
-                <div class="p-4">
+                <div class="table-responsive p-4">
                     <table class="table align-middle">
                         <thead>
                             <tr>
@@ -105,7 +105,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-5">
+        <div class="col-lg-4">
             <div class="card">
                 <div class="card-header">
                     Ingresar datos
