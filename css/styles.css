@@ -79,6 +79,10 @@
   width: 50%;
 }
 
+p img {
+  width: 100%;
+}
+
 @media (max-width: 1000px) {
   .statistics{
     width: 70% !important;
