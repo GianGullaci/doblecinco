@@ -1,7 +1,6 @@
 <?php include 'template/header.php' ?>
 
 <?php
-    include_once "model/conexion.php";
     $id_nota = $_GET['id'];
     $sentencia = $bd -> query("SELECT id_nota, titulo_nota, copete, bajada,texto_nota, imagen_principal,epigrafe, cat_padre.color_categoria as color_categoria, id_autor, nombre_autor, 
     titulo_autor, foto, id_partido_cubierto, notas.titulo_galeria as titulo_galeria, 
@@ -18,7 +17,6 @@
 ?>
 
 <?php
-    include_once "model\conexion.php";
     $sentencia = $bd -> query("SELECT id_publicidad, archivo_publicidad, link_publicidad
     FROM notas
     left join  publicidades_posicionadas on publicidades_posicionadas.notas_id_nota=id_nota
@@ -93,7 +91,6 @@
             <h3 style="font-size:19px;"><?php echo $row->titulo_galeria;?></h3>
             <div class="row g-2 my-0">
                 <?php
-                    include_once "model/conexion.php";
                     $sentencia = $bd -> query( "SELECT * FROM galerias
                                                 where id_galeria=$row->galerias_id_galeria");
                     $result_galeria = $sentencia->fetchAll(PDO::FETCH_OBJ);

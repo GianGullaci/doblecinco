@@ -13,7 +13,7 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.6.1/font/bootstrap-icons.css">
 
-    <link rel="shortcut ico" href="img/home/favicon.ico" class="favicon">
+    <link rel="shortcut icon" href="img/home/favicon.ico" class="favicon">
 
     <STYLE>A {text-decoration: none;} </STYLE>
 
