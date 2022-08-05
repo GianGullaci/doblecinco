@@ -1,6 +1,6 @@
 <?php
     session_start();
-    include_once "../model/conexion.php";
+    include_once("../model/conexion.php");
     if (isset($_POST['usuario']) && isset($_POST['contraseña'])){
         function test_input($data)
         {

@@ -80,7 +80,7 @@
 }
 
 p img {
-  width: 100%;
+  width: 100% !important;
 }
 
 @media (max-width: 1000px) {
@@ -206,19 +206,33 @@ p img {
   }
 }
 
-@media (min-width: 440px) and (max-width: 470px) {
+@media (min-width: 450px) and (max-width: 471px) {
+  .statistics{
+    width: 76% !important;
+  }
+}
+
+@media (min-width: 405px) and (max-width: 427px) {
+  .statistics{
+    width: 85% !important;
+  }
+}
+
+@media (min-width: 427px) and (max-width: 450px) {
   .statistics{
     width: 80% !important;
   }
 }
 
 @media (max-width: 440px) {
-  .statistics{
-    width: 90% !important;
-  }
-
   .logo{
     width: 80%;
+  }
+}
+
+@media (max-width: 405px) {
+  .statistics{
+    width: 88% !important;
   }
 }
 
