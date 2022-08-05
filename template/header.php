@@ -94,7 +94,7 @@
 						</li>
 
             <?php
-              include_once "model\conexion.php";
+              include_once("model\conexion.php");
               $sentencia = $bd -> query("select * from categorias_notas
                                           where categorias_notas_id_categoria_notas=0 and activa=1");
               $result = $sentencia->fetchAll(PDO::FETCH_OBJ);
@@ -108,7 +108,6 @@
               <u1 class="dropdown-menu">
 
                 <?php
-                  include_once "model/conexion.php";
                   $sentencia = $bd -> query("select * from    categorias_notas
                                           where categorias_notas_id_categoria_notas='$row->id_categoria_notas' and activa=1");
                   $result2 = $sentencia->fetchAll(PDO::FETCH_OBJ);
@@ -169,7 +168,6 @@
     <div class="container">
       <center style="padding: 0px 0px 0px 0px;">
         <?php
-          include_once "model/conexion.php";
           $sentencia = $bd -> query( "select * from clubes where club_activo=1");
           $clubes = $sentencia->fetchAll(PDO::FETCH_OBJ);
           foreach($clubes as $dato){
