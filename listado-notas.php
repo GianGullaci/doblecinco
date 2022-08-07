@@ -48,7 +48,7 @@
                     if (is_file($path)) {
             ?>
 
-            <div class="col-lg-3 col-md-4 col-6">
+            <div class="col-lg-3 col-md-6 col-12">
                 <div class="card border">
                     <img src="img/notas/<?php echo $row2->id_nota; ?>/<?php echo $row2->imagen_celular; ?>" class="img-list rounded-start" alt="">
                     <div class="card-img-overlay d-flex align-items-center p-3 p-sm-4">

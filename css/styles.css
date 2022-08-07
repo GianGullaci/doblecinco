@@ -113,7 +113,7 @@ p img {
   }
 
   .img-list {
-    height: 215px;
+    height: 360px;
     border-radius: 2%;
   }
 
@@ -173,11 +173,6 @@ p img {
   .img-category {
     height: 100px;
     width: 100%;
-  }
-
-  .img-list {
-    height: 180px;
-    border-radius: 2%;
   }
 
   .publi-long {
