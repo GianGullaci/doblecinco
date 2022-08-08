@@ -60,7 +60,7 @@
         <div class="container">
             <a class="navbar-brand" href="index.php"><img class="logo" src="img/home/logo3_pc.png" /></a>
             <div class="navbar-item d-none d-xl-block">
-            <div class="nav-item text-muted" id="current_date">
+            <div class="nav-item text-muted fw-bold" id="current_date">
               <script>
                 var meses = new Array ("Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre");
                 var diasSemana = new Array("Domingo","Lunes","Martes","Miércoles","Jueves","Viernes","Sábado");
@@ -94,7 +94,7 @@
 						</li>
 
             <?php
-              include_once("model\conexion.php");
+              include_once("model/conexion.php");
               $sentencia = $bd -> query("select * from categorias_notas
                                           where categorias_notas_id_categoria_notas=0 and activa=1");
               $result = $sentencia->fetchAll(PDO::FETCH_OBJ);
