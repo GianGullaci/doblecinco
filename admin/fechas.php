@@ -1,17 +1,17 @@
 <?php include 'template/header.php' ?>
 
 <?php
-    include_once "../model/conexion.php";
-    $sentencia = $bd -> query( "select id_fecha, nombre_fecha, torneos.nombre_torneo, fase
-                                from fechas
-                                inner join torneos
-                                on fechas.id_torneo=torneos.id_torneo;");
+    include_once("../model/conexion.php");
+    $sentencia = $bd -> query( "SELECT fechas.id_fecha, fechas.nombre, fechas.fecha_fin as fecha_fin, fechas.fecha_inicio as fecha_inicio, torneos.nombre_torneo, fechas.fase 
+    FROM fechas 
+    left join torneos on torneos.id_torneo=fechas.torneos_id_torneo1  
+    ORDER BY fechas.nombre");
     $fechas = $sentencia->fetchAll(PDO::FETCH_OBJ);
 ?>
 
 <div class="container my-5">
-    <div class="row justify-content-center">
-        <div class="col-md-7">
+    <div class="row justify-content-center g-4">    
+        <div class="col-lg-8">
 
             <!-- inicio alerta-->
             
@@ -60,6 +60,17 @@
             ?>
 
             <?php
+                if(isset($_GET['mensaje']) and $_GET['mensaje'] == 'PartidosAsociados'){
+            ?>
+            <div class="alert alert-danger alert-dismissible fade show" role="alert">          
+                <strong>Error!</strong> Posee partidos asociados.
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+            <?php
+                }
+            ?>
+
+            <?php
                 if(isset($_GET['mensaje']) and $_GET['mensaje'] == 'eliminado'){
             ?>
             <div class="alert alert-warning alert-dismissible fade show" role="alert">          
@@ -93,9 +104,36 @@
                             ?>
 
                             <tr>
-                                <td><?php echo $dato->nombre_fecha; ?></td>
+                                <td><?php echo $dato->nombre; ?></td>
                                 <td><?php echo $dato->nombre_torneo; ?></td>
-                                <td><?php echo $dato->fase; ?></td>
+                                <?php $fase= $dato->fase;
+									if ($fase==1 or $fase==6){
+										$fase= "Fase 1";
+									}
+									else if ($fase==2){
+										$fase= "Fase 2 Juveniles";
+									}
+									else if ($fase==3){
+										$fase= "Semifinal Juveniles (Fase 3)";
+									}
+									else if ($fase==4){
+										$fase= "Final Juveniles";
+									}
+									else if ($fase==5){
+										$fase= "Finalisima Juveniles";
+									}
+									else if ($fase==7){
+										$fase= "Fase 2 Menores";
+									}
+									else if ($fase==8){
+										$fase= "Torneo Clausura Menores";
+									}
+									else if ($fase==9){
+										$fase= "Final Menores";
+									}
+                                ?>
+									
+                                <td><?php echo $fase ?></td>
                                 <td><a class="text-success" href="editar-fecha.php?id_fecha=<?php echo $dato->id_fecha;?>"><i class="bi bi-pencil-square"></i></a></td>
                                 <td><a onclick="return confirm('Estás seguro de eliminar?');" class="text-danger" href="eliminar-fecha.php?id_fecha=<?php echo $dato->id_fecha;?>"><i class="bi bi-trash-fill"></i></a></td>
                             </tr>
@@ -110,7 +148,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-5">
+        <div class="col-lg-4">
             <div class="card">
                 <div class="card-header">
                     Ingresar datos
@@ -130,14 +168,57 @@
                             <option value="<?php echo $opciones->id_torneo ?>"<?php if($opciones->id_torneo === 1){ echo 'selected = "selected"';} ?>><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"><?php echo $opciones->nombre_torneo ?></font></font></option>
                         <?php endforeach ?>
                         </select>
-                        <label class="form-label">Fase: </label>
-                        <select multiple="" class="form-select" id="selectFase" name="txtFase">
-                            <option selected><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">1</font></font></option>
-                            <option><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">2</font></font></option>
-                            <option><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">3</font></font></option>
-                            <option><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">4</font></font></option>
-                            <option><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">5</font></font></option>
-                        </select>
+                        
+                        <label class="form-label">Fase (Juveniles): </label>
+                        <div class="form-check">
+                        <input class="form-check-input" type="radio" name="txtFase" id="flexRadioDefault1" value="1" checked>
+                        <label class="form-check-label" for="flexRadioDefault1">
+                            Fase 1
+                        </label>
+                        </div>
+                        <div class="form-check">
+                        <input class="form-check-input" type="radio" name="txtFase" id="flexRadioDefault2" value="2">
+                        <label class="form-check-label" for="flexRadioDefault2">
+                            Fase 2
+                        </label>
+                        </div>
+                        <div class="form-check">
+                        <input class="form-check-input" type="radio" name="txtFase" id="flexRadioDefault3" value="3">
+                        <label class="form-check-label" for="flexRadioDefault3">
+                            Fase 3 (Semifinal)
+                        </label>
+                        </div>
+                        <div class="form-check">
+                        <input class="form-check-input" type="radio" name="txtFase" id="flexRadioDefault4" value="4">
+                        <label class="form-check-label" for="flexRadioDefault4">
+                            Fase 4 (Final)
+                        </label>
+                        </div>
+                        <div class="form-check">
+                        <input class="form-check-input" type="radio" name="txtFase" id="flexRadioDefault5" value="5">
+                        <label class="form-check-label" for="flexRadioDefault5">
+                            Fase 5 (Finalisima)
+                        </label>
+                        </div>
+                        <label class="form-label">Fase (Menores): </label>
+                        <div class="form-check">
+                        <input class="form-check-input" type="radio" name="txtFase" id="flexRadioDefault6" value="6">
+                        <label class="form-check-label" for="flexRadioDefault6">
+                            Fase 1
+                        </label>
+                        </div>
+                        <div class="form-check">
+                        <input class="form-check-input" type="radio" name="txtFase" id="flexRadioDefault7" value="7">
+                        <label class="form-check-label" for="flexRadioDefault7">
+                            Fase 2
+                        </label>
+                        </div>
+                        <div class="form-check">
+                        <input class="form-check-input" type="radio" name="txtFase" id="flexRadioDefault9" value="9">
+                        <label class="form-check-label" for="flexRadioDefault9">
+                            Final
+                        </label>
+                        </div>
                     </div>
                     <div class="d-grid">
                         <input type="hidden" name="oculto" value="1">

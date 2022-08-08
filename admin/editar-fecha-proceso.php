@@ -11,7 +11,7 @@
     $id_torneo = $_POST['cbTorneos'];
     $fase = $_POST['txtFase'];
 
-    $sentencia = $bd->prepare("UPDATE fechas SET nombre_fecha = ?, id_torneo = ?, fase = ? where id_fecha = ?;");
+    $sentencia = $bd->prepare("UPDATE fechas SET nombre = ?, torneos_id_torneo1 = ?, fase = ? where id_fecha = ?;");
     $resultado = $sentencia->execute([$nombre_fecha,$id_torneo,$fase,$id_fecha]);
 
 

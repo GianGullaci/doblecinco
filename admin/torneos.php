@@ -1,14 +1,16 @@
 <?php include 'template/header.php' ?>
 
 <?php
-    include_once "../model/conexion.php";
-    $sentencia = $bd -> query("select * from torneos");
+    include_once("../model/conexion.php");
+    $sentencia = $bd -> query("SELECT id_torneo, nombre_torneo, fecha_fin, fecha_inicio,
+    DATEDIFF(fecha_inicio,CURDATE()) as ini, DATEDIFF(fecha_fin,CURDATE()) as fin 
+    FROM torneos order by nombre_torneo");
     $torneos = $sentencia->fetchAll(PDO::FETCH_OBJ);
 ?>
 
 <div class="container my-5">
-    <div class="row justify-content-center">
-        <div class="col-md-7">
+    <div class="row justify-content-center g-4">
+        <div class="col-lg-8">
 
             <!-- inicio alerta-->
             
@@ -16,7 +18,7 @@
                 if(isset($_GET['mensaje']) and $_GET['mensaje'] == 'falta'){
             ?>
             <div class="alert alert-danger alert-dismissible fade show" role="alert">          
-                <strong>Error!</strong> Falta ingresar el nombre
+                <strong>Error!</strong> Faltan ingresar datos
                 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
             </div>
             <?php
@@ -50,6 +52,17 @@
             ?>
             <div class="alert alert-success alert-dismissible fade show" role="alert">          
                 <strong>Editado!</strong> Se editaron los datos
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+            <?php
+                }
+            ?>
+
+            <?php
+                if(isset($_GET['mensaje']) and $_GET['mensaje'] == 'FechasAsociadas'){
+            ?>
+            <div class="alert alert-danger alert-dismissible fade show" role="alert">          
+                <strong>Error!</strong> Posee fechas asociadas.
                 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
             </div>
             <?php
@@ -103,7 +116,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-5">
+        <div class="col-lg-4">
             <div class="card">
                 <div class="card-header">
                     Ingresar datos
@@ -112,6 +125,10 @@
                     <div class="mb-3">
                         <label class="form-label">Nombre: </label>
                         <input type="text" class="form-control" name="txtNombre" autofocus required>
+                        <label class="form-label">Fecha Inicio: </label>
+                        <input type="date" class="form-control" name="txtFechaInicio">
+                        <label class="form-label">Fecha Fin: </label>
+                        <input type="date" class="form-control" name="txtFechaFin">
                     </div>
                     <div class="d-grid">
                         <input type="hidden" name="oculto" value="1">

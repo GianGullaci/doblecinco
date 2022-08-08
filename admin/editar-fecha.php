@@ -25,7 +25,7 @@
                     <div class="mb-3">
                         <label class="form-label">Nombre: </label>
                         <input type="text" class="form-control" name="txtNombre" autofocus required 
-                        value="<?php echo $fecha->nombre_fecha; ?>">
+                        value="<?php echo $fecha->nombre; ?>">
                         <label class="form-label">Torneo: </label>
                         <select class="form-select" id="selectTorneo" name="cbTorneos">
                         <?php
@@ -34,17 +34,60 @@
                             $torneos = $consultaTorneos->fetchAll(PDO::FETCH_OBJ);
                             foreach ($torneos as $opciones): 
                         ?>
-                            <option value="<?php echo $opciones->id_torneo ?>"<?php if($opciones->id_torneo === $fecha->id_torneo){ echo 'selected = "selected"';} ?>><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"><?php echo $opciones->nombre_torneo ?></font></font></option>
+                            <option value="<?php echo $opciones->id_torneo ?>"<?php if($opciones->id_torneo === $fecha->torneos_id_torneo1){ echo 'selected = "selected"';} ?>><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"><?php echo $opciones->nombre_torneo ?></font></font></option>
                         <?php endforeach ?>
                         </select>
-                        <label class="form-label">Fase: </label>
-                        <select multiple="" class="form-select" id="selectFase" name="txtFase">
-                            <option value="1" <?php if($fecha->fase === "1"){ echo 'selected = "selected"';} ?>><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">1</font></font></option>
-                            <option value="2" <?php if($fecha->fase === "2"){ echo 'selected = "selected"';} ?>><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">2</font></font></option>
-                            <option value="3" <?php if($fecha->fase === "3"){ echo 'selected = "selected"';} ?>><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">3</font></font></option>
-                            <option value="4" <?php if($fecha->fase === "4"){ echo 'selected = "selected"';} ?>><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">4</font></font></option>
-                            <option value="5" <?php if($fecha->fase === "5"){ echo 'selected = "selected"';} ?>><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">5</font></font></option>
-                        </select>
+
+                        <label class="form-label">Fase (Juveniles): </label>
+                        <div class="form-check">
+                        <input class="form-check-input" type="radio" name="txtFase" id="flexRadioDefault1" value="1" <?php if($fecha->fase === "1"){ echo 'checked';} ?>>
+                        <label class="form-check-label" for="flexRadioDefault1">
+                            Fase 1
+                        </label>
+                        </div>
+                        <div class="form-check">
+                        <input class="form-check-input" type="radio" name="txtFase" id="flexRadioDefault2" value="2" <?php if($fecha->fase === "2"){ echo 'checked';} ?>>
+                        <label class="form-check-label" for="flexRadioDefault2">
+                            Fase 2
+                        </label>
+                        </div>
+                        <div class="form-check">
+                        <input class="form-check-input" type="radio" name="txtFase" id="flexRadioDefault3" value="3" <?php if($fecha->fase === "3"){ echo 'checked';} ?>>
+                        <label class="form-check-label" for="flexRadioDefault3">
+                            Fase 3 (Semifinal)
+                        </label>
+                        </div>
+                        <div class="form-check">
+                        <input class="form-check-input" type="radio" name="txtFase" id="flexRadioDefault4" value="4" <?php if($fecha->fase === "4"){ echo 'checked';} ?>>
+                        <label class="form-check-label" for="flexRadioDefault4">
+                            Fase 4 (Final)
+                        </label>
+                        </div>
+                        <div class="form-check">
+                        <input class="form-check-input" type="radio" name="txtFase" id="flexRadioDefault5" value="5" <?php if($fecha->fase === "5"){ echo 'checked';} ?>>
+                        <label class="form-check-label" for="flexRadioDefault5">
+                            Fase 5 (Finalisima)
+                        </label>
+                        </div>
+                        <label class="form-label">Fase (Menores): </label>
+                        <div class="form-check">
+                        <input class="form-check-input" type="radio" name="txtFase" id="flexRadioDefault6" value="6" <?php if($fecha->fase === "6"){ echo 'checked';} ?>>
+                        <label class="form-check-label" for="flexRadioDefault6">
+                            Fase 1
+                        </label>
+                        </div>
+                        <div class="form-check">
+                        <input class="form-check-input" type="radio" name="txtFase" id="flexRadioDefault7" value="7" <?php if($fecha->fase === "7"){ echo 'checked';} ?>>
+                        <label class="form-check-label" for="flexRadioDefault7">
+                            Fase 2
+                        </label>
+                        </div>
+                        <div class="form-check">
+                        <input class="form-check-input" type="radio" name="txtFase" id="flexRadioDefault9" value="9" <?php if($fecha->fase === "9"){ echo 'checked';} ?>>
+                        <label class="form-check-label" for="flexRadioDefault9">
+                            Final
+                        </label>
+                        </div>
                     </div>
                     <div class="d-grid">
                         <input type="hidden" name="id_fecha" value="<?php echo $fecha->id_fecha; ?>">

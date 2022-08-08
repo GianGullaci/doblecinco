@@ -3,7 +3,7 @@
 <?php
     include_once "../model/conexion.php";
     $sentencia = $bd -> query( "select id_jugador, nombre_jugador, fecha_nacimiento, 
-                                ciudades.nombre_ciudad, puesto.nombre_puesto, pierna_habil.nombre_pierna, equipos.nombre_equipo
+                                ciudades.nombre, puesto.nombre_puesto, pierna_habil.nombre_pierna, equipos.nombre_equipo
                                 from jugadores
                                 inner join ciudades on jugadores.id_ciudad = ciudades.id_ciudad
                                 inner join puesto on jugadores.id_puesto = puesto.id_puesto

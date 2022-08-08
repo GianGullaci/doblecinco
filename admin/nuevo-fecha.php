@@ -4,12 +4,12 @@
         exit();
     }
     
-    include_once '../model/conexion.php';
+    include_once('../model/conexion.php');
     $nombre_fecha = $_POST['txtNombre'];
     $id_torneo = $_POST['cbTorneos'];
     $fase = $_POST['txtFase'];
 
-    $sentencia = $bd->prepare("INSERT INTO fechas(nombre_fecha,id_torneo,fase) VALUES (?,?,?);");
+    $sentencia = $bd->prepare("INSERT INTO fechas(nombre,torneos_id_torneo1,fase) VALUES (?,?,?);");
     $resultado = $sentencia->execute([$nombre_fecha,$id_torneo,$fase]);
 
     if ($resultado === TRUE) {
