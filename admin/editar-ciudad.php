@@ -25,7 +25,7 @@
                     <div class="mb-3">
                         <label class="form-label">Nombre: </label>
                         <input type="text" class="form-control" name="txtNombre" autofocus required 
-                        value="<?php echo $ciudad->nombre_ciudad; ?>">
+                        value="<?php echo $ciudad->nombre; ?>">
                     </div>
                     <div class="d-grid">
                         <input type="hidden" name="id_ciudad" value="<?php echo $ciudad->id_ciudad; ?>">

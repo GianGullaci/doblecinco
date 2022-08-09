@@ -2,13 +2,30 @@
 
 <?php
     include_once "../model/conexion.php";
-    $sentencia = $bd -> query("select * from ciudades");
+    $sentencia = $bd -> query("select * from ciudades ORDER BY ciudades.nombre ASC");
     $ciudades = $sentencia->fetchAll(PDO::FETCH_OBJ);
 ?>
 
 <div class="container my-5">
-    <div class="row justify-content-center">
-        <div class="col-md-7">
+    <div class="row justify-content-center g-4">
+    <div class="col-lg-4">
+            <div class="card">
+                <div class="card-header">
+                    Ingresar datos
+                </div>
+                <form  class="p-4" method="POST" action="nuevo-ciudad.php">
+                    <div class="mb-3">
+                        <label class="form-label">Nombre: </label>
+                        <input type="text" class="form-control" name="txtNombre" autofocus required>
+                    </div>
+                    <div class="d-grid">
+                        <input type="hidden" name="oculto" value="1">
+                        <input type="submit" class="btn btn-primary" value="Guardar">
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="col-lg-8">
 
             <!-- inicio alerta-->
             
@@ -67,6 +84,17 @@
                 }
             ?>
 
+            <?php
+                if(isset($_GET['mensaje']) and $_GET['mensaje'] == 'JugadoresAsociados'){
+            ?>
+            <div class="alert alert-danger alert-dismissible fade show" role="alert">          
+                <strong>Error!</strong> Posee jugadores asociados.
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+            <?php
+                }
+            ?>
+
             <!-- fin alerta-->
 
 
@@ -89,8 +117,7 @@
                             ?>
 
                             <tr>
-                                <!--<td scope="row"><?php echo $dato->id_ciudad;?></td>-->
-                                <td><?php echo $dato->nombre_ciudad; ?></td>
+                                <td><?php echo $dato->nombre; ?></td>
                                 <td><a class="text-success" href="editar-ciudad.php?id_ciudad=<?php echo $dato->id_ciudad;?>"><i class="bi bi-pencil-square"></i></a></td>
                                 <td><a onclick="return confirm('Estás seguro de eliminar?');" class="text-danger" href="eliminar-ciudad.php?id_ciudad=<?php echo $dato->id_ciudad;?>"><i class="bi bi-trash-fill"></i></a></td>
                             </tr>
@@ -103,23 +130,6 @@
                     </table>
                     
                 </div>
-            </div>
-        </div>
-        <div class="col-md-5">
-            <div class="card">
-                <div class="card-header">
-                    Ingresar datos
-                </div>
-                <form  class="p-4" method="POST" action="nuevo-ciudad.php">
-                    <div class="mb-3">
-                        <label class="form-label">Nombre: </label>
-                        <input type="text" class="form-control" name="txtNombre" autofocus required>
-                    </div>
-                    <div class="d-grid">
-                        <input type="hidden" name="oculto" value="1">
-                        <input type="submit" class="btn btn-primary" value="Guardar">
-                    </div>
-                </form>
             </div>
         </div>
     </div>

@@ -7,7 +7,7 @@
     include_once '../model/conexion.php';
     $nombre_ciudad = $_POST['txtNombre'];
 
-    $sentencia = $bd->prepare("INSERT INTO ciudades(nombre_ciudad) VALUES (?);");
+    $sentencia = $bd->prepare("INSERT INTO ciudades(nombre) VALUES (?);");
     $resultado = $sentencia->execute([$nombre_ciudad]);
 
     if ($resultado === TRUE) {

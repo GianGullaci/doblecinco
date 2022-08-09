@@ -4,7 +4,7 @@
         exit();
     }
 
-    include_once '../model/conexion.php';
+    /*include_once '../model/conexion.php';
     $nombre_equipo = $_POST['txtNombre'];
     $direccion_sede = $_POST['txtSede'];
     $telefono = $_POST['txtTel'];
@@ -27,5 +27,5 @@
     } else {
         header('location: equipos.php?mensaje=error');
         exit();
-    }
+    }*/
 ?>
