@@ -10,6 +10,27 @@
 
 <div class="container my-5">
     <div class="row justify-content-center g-4">
+        <div class="col-lg-4">
+            <div class="card">
+                <div class="card-header">
+                    Ingresar datos
+                </div>
+                <form  class="p-4" method="POST" action="nuevo-torneo.php">
+                    <div class="mb-3">
+                        <label class="form-label">Nombre: </label>
+                        <input type="text" class="form-control" name="txtNombre" autofocus required>
+                        <label class="form-label">Fecha Inicio: </label>
+                        <input type="date" class="form-control" name="txtFechaInicio">
+                        <label class="form-label">Fecha Fin: </label>
+                        <input type="date" class="form-control" name="txtFechaFin">
+                    </div>
+                    <div class="d-grid">
+                        <input type="hidden" name="oculto" value="1">
+                        <input type="submit" class="btn btn-primary" value="Guardar">
+                    </div>
+                </form>
+            </div>
+        </div>
         <div class="col-lg-8">
 
             <!-- inicio alerta-->
@@ -114,27 +135,6 @@
                     </table>
                     
                 </div>
-            </div>
-        </div>
-        <div class="col-lg-4">
-            <div class="card">
-                <div class="card-header">
-                    Ingresar datos
-                </div>
-                <form  class="p-4" method="POST" action="nuevo-torneo.php">
-                    <div class="mb-3">
-                        <label class="form-label">Nombre: </label>
-                        <input type="text" class="form-control" name="txtNombre" autofocus required>
-                        <label class="form-label">Fecha Inicio: </label>
-                        <input type="date" class="form-control" name="txtFechaInicio">
-                        <label class="form-label">Fecha Fin: </label>
-                        <input type="date" class="form-control" name="txtFechaFin">
-                    </div>
-                    <div class="d-grid">
-                        <input type="hidden" name="oculto" value="1">
-                        <input type="submit" class="btn btn-primary" value="Guardar">
-                    </div>
-                </form>
             </div>
         </div>
     </div>
