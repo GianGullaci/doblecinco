@@ -30,7 +30,7 @@
                         <label class="form-label">Nombre: </label>
                         <input type="text" class="form-control" name="txtNombre" autofocus required>
                         <label class="form-label">Fecha Nacimiento: </label>
-                        <input type="date" class="form-control" name="txtFecha" autofocus required>
+                        <input type="date" class="form-control" name="txtFecha" required>
                         <label class="form-label">Ciudad: </label>
                         <select class="form-select" id="selectCiudad" name="cbCiudad">
                             <option value="0"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Ciudades</font></font></option>
@@ -71,7 +71,7 @@
                         <select class="form-select" id="selectClub" name="cbClub">
                         <?php
                             include_once "../model/conexion.php";
-                            $consultaClubes = $bd -> query( "select * from clubes ORDER BY clubes.nombre_club ASC;");
+                            $consultaClubes = $bd -> query( "select * from clubes ORDER BY clubes.nombre_club ASC;tab");
                             $clubes = $consultaClubes->fetchAll(PDO::FETCH_OBJ);
                             foreach ($clubes as $opcionesClubes): 
                         ?>

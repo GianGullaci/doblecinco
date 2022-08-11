@@ -143,7 +143,7 @@
                 <div class="card-header">
                     Lista de Clubes
                 </div>
-                <div class="p-4">
+                <div class="p-4 table-responsive">
                     <table class="table align-middle">
                         <thead>
                             <tr>

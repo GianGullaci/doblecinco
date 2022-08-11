@@ -9,19 +9,30 @@
     include_once '../model/conexion.php';
     $id_partido = $_GET['id_partido'];
 
-    $sentencia = $bd->prepare("select * from partidos where id_partido = ?;");
+    $sentencia = $bd->prepare("SELECT id_partido, fecha_partido, hora_partido,lugares.direccion as lugar, tipo_lugar, zona, 
+    club_juega.nombre_club as nombre_juega, club_local.nombre_club as nombre_local, club_local.id_club as id_local, 
+    club_visitante.nombre_club as nombre_visitante, club_visitante.id_club as id_visitante, nombre_categoria,  fechas.nombre as nombre_fecha, 
+    nombre_torneo, DATEDIFF(fecha_partido,CURDATE()) as dif,
+    fechas.torneos_id_torneo1, partidos.fechas_id_fecha, equipo_visitante.categorias_id_categoria, 
+    partidos.lugares_id_lugar, arbitros_id_arbitro, arbitros_id_arbitro1, arbitros_id_arbitro2, partidos.descripcion,
+    equipo_local.id_equipo as id_equipo_local, equipo_visitante.id_equipo as id_equipo_visitante,
+    configuracion_local, configuracion_visitante, partidos.galerias_id_galeria as galerias_id_galeria, 
+    partidos.face_album as face_album, partidos.flickr_album as flickr_album,
+    equipo_local.nombre_equipo as nombre_equipo_local,
+    equipo_visitante.nombre_equipo as nombre_equipo_visitante
+    FROM partidos 
+    left join equipos as equipo_local on equipo_local.id_equipo=partidos.equipos_id_equipo
+    left join clubes as club_local on club_local.id_club=equipo_local.clubes_id_club
+    left join equipos as equipo_visitante on equipo_visitante.id_equipo=partidos.equipos_id_equipo1
+    left join clubes as club_visitante on club_visitante.id_club=equipo_visitante.clubes_id_club
+    left join categorias on categorias.id_categoria=equipo_visitante.categorias_id_categoria
+    left join fechas on fechas.id_fecha=partidos.fechas_id_fecha
+    left join torneos on fechas.torneos_id_torneo1=torneos.id_torneo
+    left join lugares on partidos.lugares_id_lugar=lugares.id_lugar
+    left join clubes as club_juega on club_juega.id_club=lugares.clubes_id_club
+    where partidos.id_partido = ?;");
     $sentencia->execute([$id_partido]);
     $partido = $sentencia->fetch(PDO::FETCH_OBJ);
-
-    $sentencia = $bd->prepare("select id_fecha from partidos where id_partido = ?;");
-    $sentencia->execute([$id_partido]);
-    $fechaPartido = $sentencia->fetch(PDO::FETCH_OBJ);
-    
-    foreach($fechaPartido as $opcionFecha):
-        $sentencia = $bd->prepare("select id_torneo from fechas where id_fecha = ?;");
-        $sentencia->execute([$opcionFecha]);
-        $id_torneo = $sentencia->fetch(PDO::FETCH_OBJ);
-    endforeach;
 ?>
 
 

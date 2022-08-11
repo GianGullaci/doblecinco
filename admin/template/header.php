@@ -36,6 +36,7 @@
                 <l1><a class="dropdown-item" href="torneos.php">Torneos</a></l1>
                 <l1><a class="dropdown-item" href="fechas.php">Fechas</a></l1>
                 <l1><a class="dropdown-item" href="partidos.php">Partidos</a></l1>
+                <l1><a class="dropdown-item" href="nuevo-partido.php">Cargar Partido</a></l1>
               </u1>
             </l1>
             <l1 class="nav-item"><a class="nav-link" href="clubes.php">Clubes</a></l1>
