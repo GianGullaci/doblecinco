@@ -42,6 +42,7 @@
             <l1 class="nav-item"><a class="nav-link" href="clubes.php">Clubes</a></l1>
             <l1 class="nav-item"><a class="nav-link" href="equipos.php">Equipos</a></l1>
             <l1 class="nav-item"><a class="nav-link" href="jugadores.php">Jugadores</a></l1>
+            <l1 class="nav-item"><a class="nav-link" href="notas.php">Notas</a></l1>
             <l1 class="nav-item"><a class="nav-link" href="ciudades.php">Ciudades</a></l1>
             <l1 class="nav-item"><a class="nav-link" href="usuarios.php">Administradores</a></l1>
           </u1>
