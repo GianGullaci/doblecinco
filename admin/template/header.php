@@ -42,7 +42,15 @@
             <l1 class="nav-item"><a class="nav-link" href="clubes.php">Clubes</a></l1>
             <l1 class="nav-item"><a class="nav-link" href="equipos.php">Equipos</a></l1>
             <l1 class="nav-item"><a class="nav-link" href="jugadores.php">Jugadores</a></l1>
-            <l1 class="nav-item"><a class="nav-link" href="notas.php">Notas</a></l1>
+            <l1 class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                Notas
+              </a>
+              <u1 class="dropdown-menu">
+                <l1><a class="dropdown-item" href="notas.php">Listado Notas</a></l1>
+                <l1><a class="dropdown-item" href="nuevo-nota.php">Cargar Nota</a></l1>
+              </u1>
+            </l1>
             <l1 class="nav-item"><a class="nav-link" href="ciudades.php">Ciudades</a></l1>
             <l1 class="nav-item"><a class="nav-link" href="usuarios.php">Administradores</a></l1>
           </u1>
