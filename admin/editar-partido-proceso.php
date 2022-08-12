@@ -6,18 +6,32 @@
     include '../model/conexion.php';
     $id_partido = $_POST['id_partido'];
     $id_fecha = $_POST['cbFecha'];
-    if ($_POST['cbZona'] == 1){
-        $zona = 'A';
-    } else {
-        $zona = 'B';
-    };
+    $zona = $_POST['cbZona'];
     $fecha_partido = $_POST['txtDia'];
     $hora_partido = $_POST['txtHora'];
-    $id_equipo = $_POST['cbEquipo'];
-    $id_equipo1 = $_POST['cbEquipo1'];   
+    $categoria = $_POST['cbCategoria'];
+    $arbitro = $_POST['cbArbitro'];
+    $arbitro1 = $_POST['cbArbitro1'];
+    $arbitro2 = $_POST['cbArbitro2'];
+    $id_equipo_local = $_POST['cbLocal'];
+    $id_equipo_visitante = $_POST['cbVisitante'];
+    $galeria = $_POST['cbGaleria'];
+    $lugar = $_POST['cbLugar'];
+    $txt = str_replace("font-family:exo 2,sans-serif;", "font-family:'Exo 2',sans-serif;", $_POST['descripcion']);
+    $txt = base64_encode($txt); 
 
-    $sentencia = $bd->prepare("UPDATE partidos SET id_fecha = ?, zona = ?, fecha_partido = ?, hora_partido = ?, id_equipo = ?, id_equipo1 = ? where id_partido = ?;");
-    $resultado = $sentencia->execute([$id_fecha,$zona,$fecha_partido,$hora_partido,$id_equipo,$id_equipo1,$id_partido]);
+    $sentencia = $bd->prepare("UPDATE partidos SET arbitros_id_arbitro= $arbitro,
+    arbitros_id_arbitro1= $arbitro1,
+    arbitros_id_arbitro2= $arbitro2,
+    hora_partido= $hora_partido, 
+    fecha_partido=$fecha_partido, 
+    lugares_id_lugar=$lugar, 
+    galerias_id_galeria=$galeria, 
+    zona= $zona,
+    fechas_id_fecha= $id_fecha, 
+    descripcion=$txt 
+    WHERE id_partido=$id_partido;");
+    $resultado = $sentencia->execute();
 
 
     if ($resultado === TRUE) {

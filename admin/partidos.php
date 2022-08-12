@@ -112,7 +112,7 @@
                                 <th scope="col">Categoría</th>
                                 <th scope="col">Local</th>
                                 <th scope="col">Visitante</th>
-                                <th scope="col" colspan="2">Opciones</th>
+                                <th scope="col" colspan="4">Opciones</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -134,6 +134,11 @@
                                 <td><?php echo $dato->nombre_equipo_local; ?></td>
                                 <td><?php echo $dato->nombre_equipo_visitante; ?></td>
                                 <td><a class="text-success" href="editar-partido.php?id_partido=<?php echo $dato->id_partido;?>"><i class="bi bi-pencil-square"></i></a></td>
+
+                                <td><a class="text-success" href="jugadores-partido.php?id_partido=<?php echo $dato->id_partido;?>"><i class="bi bi-person"></i></a></td>
+
+                                <td><a class="text-success" href="goles-partido.php?id_partido=<?php echo $dato->id_partido;?>"><i class="bi bi-dribbble"></i></a></td>
+
                                 <td><a onclick="return confirm('Estás seguro de eliminar?');" class="text-danger" href="eliminar-partido.php?id_partido=<?php echo $dato->id_partido;?>"><i class="bi bi-trash-fill"></i></a></td>
                             </tr>
 
