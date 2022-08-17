@@ -41,7 +41,15 @@
             </l1>
             <l1 class="nav-item"><a class="nav-link" href="clubes.php">Clubes</a></l1>
             <l1 class="nav-item"><a class="nav-link" href="equipos.php">Equipos</a></l1>
-            <l1 class="nav-item"><a class="nav-link" href="jugadores.php">Jugadores</a></l1>
+            <l1 class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                Jugadores
+              </a>
+              <u1 class="dropdown-menu">
+                <l1><a class="dropdown-item" href="jugadores.php">Listado Jugadores</a></l1>
+                <l1><a class="dropdown-item" href="nuevo-jugador.php">Cargar Jugador</a></l1>
+              </u1>
+            </l1>
             <l1 class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
                 Notas

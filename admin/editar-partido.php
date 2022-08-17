@@ -50,7 +50,7 @@
         if ($row->fecha_partido!="0000-00-00 00:00:00"){
             $dia= $row->fecha_partido;
             $time = strtotime($dia);
-            $dia = date("d-m-Y", $time);
+            $dia = date("Y-m-d", $time);
         }
         $hora=$row->hora_partido;
         $arbitro=$row->arbitros_id_arbitro;
@@ -129,7 +129,6 @@
                         <?php
                             $consultaLugares = $bd -> query( "SELECT distinct(id_lugar), tipo_lugar, id_lugar, nombre_club, direccion FROM lugares join clubes on clubes.id_club=lugares.clubes_id_club join equipos on equipos.clubes_id_club=clubes.id_club WHERE (clubes.id_club = $id_local or clubes.id_club = $id_visitante) or (lugares.neutral = 1);");
                             $lugares = $consultaLugares->fetchAll(PDO::FETCH_OBJ);
-                            print_r($lugares);
                             foreach ($lugares as $opcionesLugares):
                                 if ($opcionesLugares->tipo_lugar==1){
                                     $tipo="Sede ";

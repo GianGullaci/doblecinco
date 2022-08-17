@@ -56,50 +56,42 @@
         $nombre_equipo_visitante=$row->nombre_equipo_visitante;
     }
 
-    if (isset($_POST['cbGolLocal'])){
-        $id_jugador = $_POST['cbGolLocal'];
-        if (isset($_POST['contraL'])) {
-            $contraL = $_POST['contraL'];
-        } else{
-            $contraL = 0;
-        }
-        $sentencia = $bd->prepare("INSERT INTO goles_partidos (partidos_id_partido, jugadores_id_jugador, equipos_id_equipo, en_contra) VALUES (?,?,?,?);");
-        $resultado = $sentencia->execute([$id_partido,$id_jugador,$id_equipo_local,$contraL]);
+    if (isset($_POST['cbAmonestacionLocal'])){
+        $id_jugador = $_POST['cbAmonestacionLocal'];
+        $amonestacionL = $_POST['tarjetaL'];
+        $sentencia = $bd->prepare("INSERT INTO amonestaciones_partidos (partidos_id_partido, jugadores_id_jugador, equipos_id_equipo, tarjeta_roja) VALUES (?,?,?,?);");
+        $resultado = $sentencia->execute([$id_partido,$id_jugador,$id_equipo_local,$amonestacionL]);
         if ($resultado === TRUE) {
-            header("location: goles-partido.php?id_partido=".$id_partido."&mensaje=registrado");
+            header("location: amonestaciones-partido.php?id_partido=".$id_partido."&mensaje=registrado");
         } else {
-            header("location: goles-partido.php?id_partido=".$id_partido."&mensaje=error");
+            header("location: amonestaciones-partido.php?id_partido=".$id_partido."&mensaje=error");
             exit();
         }
     }
 
-    if (isset($_POST['cbGolVisitante'])){
-        $id_jugador = $_POST['cbGolVisitante'];
-        if (isset($_POST['contraV'])) {
-            $contraV = $_POST['contraV'];
-        } else{
-            $contraV = 0;
-        }
-        $sentencia = $bd->prepare("INSERT INTO goles_partidos (partidos_id_partido, jugadores_id_jugador, equipos_id_equipo, en_contra) VALUES (?,?,?,?);");
-        $resultado = $sentencia->execute([$id_partido,$id_jugador,$id_equipo_visitante,$contraV]);
+    if (isset($_POST['cbAmonestacionVisitante'])){
+        $id_jugador = $_POST['cbAmonestacionVisitante'];
+        $amonestacionV = $_POST['tarjetaV'];
+        $sentencia = $bd->prepare("INSERT INTO amonestaciones_partidos (partidos_id_partido, jugadores_id_jugador, equipos_id_equipo, tarjeta_roja) VALUES (?,?,?,?);");
+        $resultado = $sentencia->execute([$id_partido,$id_jugador,$id_equipo_visitante,$amonestacionV]);
         if ($resultado === TRUE) {
-            header("location: goles-partido.php?id_partido=".$id_partido."&mensaje=registrado");
+            header("location: amonestaciones-partido.php?id_partido=".$id_partido."&mensaje=registrado");
         } else {
-            header("location: goles-partido.php?id_partido=".$id_partido."&mensaje=error");
+            header("location: amonestaciones-partido.php?id_partido=".$id_partido."&mensaje=error");
             exit();
         }
     }
 
-    if (isset($_GET['id_gol'])) {
-        $id_gol = $_GET['id_gol'];
-        $sentencia = $bd->prepare("DELETE FROM goles_partidos 
-        WHERE id_goles_partidos= ?;");
-        $resultado = $sentencia->execute([$id_gol]);
+    if (isset($_GET['id_amonestacion'])) {
+        $id_amonestacion = $_GET['id_amonestacion'];
+        $sentencia = $bd->prepare("DELETE FROM amonestaciones_partidos 
+        WHERE id_amonestaciones_partidos= ?;");
+        $resultado = $sentencia->execute([$id_amonestacion]);
 
         if ($resultado === TRUE) {
-            header("location: goles-partido.php?id_partido=".$id_partido."&mensaje=eliminado");
+            header("location: amonestaciones-partido.php?id_partido=".$id_partido."&mensaje=eliminado");
         } else {
-            header("location: goles-partido.php?id_partido=".$id_partido."&mensaje=error");
+            header("location: amonestaciones-partido.php?id_partido=".$id_partido."&mensaje=error");
             exit();
         }
     }
@@ -145,7 +137,7 @@
                 <form  class="p-4" method="POST" action="#" enctype="multipart/form-data">
                     <div class="mb-3">
                         <label class="form-label">Jugador: </label>
-                        <select class="form-select" id="selectGolLocal" name="cbGolLocal">
+                        <select class="form-select" id="selectAmonestacionLocal" name="cbAmonestacionLocal">
                         <?php
                             $consultaJugadores = $bd -> query( "SELECT * FROM jugadores_partidos 
                             left join partidos on jugadores_partidos.partidos_id_partido=partidos.id_partido
@@ -159,8 +151,18 @@
                             <option value="<?php echo $opcionesJugadores->id_jugador ?>" <?php if($opcionesJugadores->id_jugador === 0){ echo 'selected = "selected"';} ?>><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"><?php echo $opcionesJugadores->nombre_jugador ?></font></font></option>
                         <?php endforeach ?>
                         </select>
-                        <label class="form-label">En Contra: </label>
-                        <input class="form-check-input" type="checkbox" value="1" id="contraL" name="contraL">
+                        <div class="form-check">
+                        <input class="form-check-input" type="radio" name="tarjetaL" id="flexRadioDefault1" value="0" checked>
+                        <label class="form-check-label" for="flexRadioDefault1">
+                            Tarjeta Amarilla
+                        </label>
+                        </div>
+                        <div class="form-check">
+                        <input class="form-check-input" type="radio" name="tarjetaL" id="flexRadioDefault2" value="1">
+                        <label class="form-check-label" for="flexRadioDefault2">
+                            Tarjeta Roja
+                        </label>
+                        </div>
                                                                     
                     </div>
                     <div class="d-grid">
@@ -178,7 +180,7 @@
                 <form  class="p-4" method="POST" action="#" enctype="multipart/form-data">
                     <div class="mb-3">
                         <label class="form-label">Jugador: </label>
-                        <select class="form-select" id="selectGolVisitante" name="cbGolVisitante">
+                        <select class="form-select" id="selectAmonestacionVisitante" name="cbAmonestacionVisitante">
                         <?php
                             $consultaJugadores = $bd -> query( "SELECT * FROM jugadores_partidos 
                             left join partidos on jugadores_partidos.partidos_id_partido=partidos.id_partido
@@ -192,8 +194,18 @@
                             <option value="<?php echo $opcionesJugadores->id_jugador ?>" <?php if($opcionesJugadores->id_jugador === 0){ echo 'selected = "selected"';} ?>><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"><?php echo $opcionesJugadores->nombre_jugador ?></font></font></option>
                         <?php endforeach ?>
                         </select>
-                        <label class="form-label">En Contra: </label>
-                        <input class="form-check-input" type="checkbox" value="1" id="contraV" name="contraV">
+                        <div class="form-check">
+                        <input class="form-check-input" type="radio" name="tarjetaV" id="flexRadioDefault3" value="0" checked>
+                        <label class="form-check-label" for="flexRadioDefault3">
+                            Tarjeta Amarilla
+                        </label>
+                        </div>
+                        <div class="form-check">
+                        <input class="form-check-input" type="radio" name="tarjetaV" id="flexRadioDefault4" value="1">
+                        <label class="form-check-label" for="flexRadioDefault4">
+                            Tarjeta Roja
+                        </label>
+                        </div>
                                                                     
                     </div>
                     <div class="d-grid">
@@ -218,34 +230,34 @@
                             <tr>
                                 <th scope="col">Nombre</th>
                                 <th scope="col">Equipo</th>
-                                <th scope="col">En Contra</th>
+                                <th scope="col">Amonestación</th>
                                 <th scope="col">Opciones</th>
                             </tr>
                         </thead>
                         <tbody>
                             <?php
-                                $consultaGolesPartido = $bd -> query( "SELECT id_goles_partidos as id_gol, goles_partidos.hora as hora, nombre_jugador, nombre_club, en_contra
-								FROM goles_partidos
-								left join jugadores on jugadores.id_jugador=goles_partidos.jugadores_id_jugador
-								left join equipos on equipos.id_equipo=goles_partidos.equipos_id_equipo
-								left join clubes on clubes.id_club=equipos.clubes_id_club
-								where partidos_id_partido=$id_partido;");
-                                $golesPartido = $consultaGolesPartido->fetchAll(PDO::FETCH_OBJ);
-                                foreach ($golesPartido as $opcionesGolesPartido): 
+                                $consultaAmostaciones = $bd -> query( "SELECT id_amonestaciones_partidos as id_amonestacion, amonestaciones_partidos.hora as hora, nombre_jugador, nombre_club, tarjeta_roja
+                                FROM amonestaciones_partidos
+                                left join jugadores on jugadores.id_jugador=amonestaciones_partidos.jugadores_id_jugador
+                                left join equipos on equipos.id_equipo=amonestaciones_partidos.equipos_id_equipo
+                                left join clubes on clubes.id_club=equipos.clubes_id_club
+                                where partidos_id_partido=$id_partido;");
+                                $amonestaciones = $consultaAmostaciones->fetchAll(PDO::FETCH_OBJ);
+                                foreach ($amonestaciones as $opcionesAmonestaciones): 
                             ?>
 
                             <tr>
-                                <td><?php echo $opcionesGolesPartido->nombre_jugador; ?></td>
-                                <td><?php echo $opcionesGolesPartido->nombre_club; ?></td>
+                                <td><?php echo $opcionesAmonestaciones->nombre_jugador; ?></td>
+                                <td><?php echo $opcionesAmonestaciones->nombre_club; ?></td>
                                 <?php 
-                                    if ($opcionesGolesPartido->en_contra==1){
-										echo "<td><span class='label label-important'>SI</span></td>";
-									}
-									else{
-										echo "<td>NO</td>";
-									}
+                                    if ($opcionesAmonestaciones->tarjeta_roja==1){
+                                        echo '<td class="center">Roja</td>';
+                                    }
+                                    else{
+                                        echo '<td class="center">Amarilla</td>';
+                                    }
                                 ?>
-                                <td style="text-align: center;"><a onclick="return confirm('Estás seguro de eliminar?');" class="text-danger" href="?id_partido=<?php echo $id_partido;?>&id_gol=<?php echo $opcionesGolesPartido->id_gol;?>"><i class="bi bi-trash-fill"></i></a></td>
+                                <td style="text-align: center;"><a onclick="return confirm('Estás seguro de eliminar?');" class="text-danger" href="?id_partido=<?php echo $id_partido;?>&id_amonestacion=<?php echo $opcionesAmonestaciones->id_amonestacion;?>"><i class="bi bi-trash-fill"></i></a></td>
                             </tr>
 
                             <?php

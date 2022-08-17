@@ -40,9 +40,11 @@
 
         $principal = $_FILES["imgPrincipal"]["name"];
         $tmpPrincipal = $_FILES["imgPrincipal"]["tmp_name"];
+        mkdir("../img/notas/".$id, 0777, true);
+		chmod("../img/notas/".$id, 0777);
     
         if($principal!=""){
-            move_uploaded_file($tmpPrincipal,"../img/notas/"."principal.jpg");
+            move_uploaded_file($tmpPrincipal,"../img/notas/".$id."/principal.jpg");
             $sentencia = $bd->prepare("UPDATE notas SET imagen_principal = 'principal.jpg' WHERE id_nota = $id;");
             $resultado = $sentencia->execute();
         };
@@ -51,7 +53,7 @@
         $tmpHome = $_FILES["imgHome"]["tmp_name"];
     
         if($home!=""){
-            move_uploaded_file($tmpHome,"../img/notas/"."home.jpg");
+            move_uploaded_file($tmpHome,"../img/notas/".$id."/home.jpg");
             $sentencia = $bd->prepare("UPDATE notas SET imagen_home = 'home.jpg' WHERE id_nota = $id;");
             $resultado = $sentencia->execute();
         };
@@ -60,8 +62,8 @@
         $tmpHome2 = $_FILES["imgHome2"]["tmp_name"];
     
         if($home2!=""){
-            move_uploaded_file($tmpHome2,"../img/notas/"."home2.jpg");
-            $sentencia = $bd->prepare("UPDATE notas SET imagen_home = 'home2.jpg' WHERE id_nota = $id;");
+            move_uploaded_file($tmpHome2,"../img/notas/".$id."/home2.jpg");
+            $sentencia = $bd->prepare("UPDATE notas SET imagen_celular = 'home2.jpg' WHERE id_nota = $id;");
             $resultado = $sentencia->execute();
         };
 
