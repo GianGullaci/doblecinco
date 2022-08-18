@@ -1,6 +1,5 @@
-<script type="text/javascript" src="../editor/js/ckeditor/ckeditor.js"></script>
-<script src="../editor/sample.js" type="text/javascript"></script>
-<link href="../editor/sample.css" rel="stylesheet" type="text/css" />
+<script src="../ckeditor/ckeditor.js"></script>
+<script src="../ckfinder/ckfinder.js"></script>
 
 <?php
     include_once '../model/conexion.php';
@@ -228,34 +227,12 @@
 							  <label class="form-label">Texto:</label>
 							  <div class="">
 								<textarea cols="80" id="editor" name="editor" rows="10"></textarea>
-								<script type="text/javascript">
-								//<![CDATA[
 
-									CKEDITOR.replace( 'editor',
-							{
+                                <script type="text/javascript">
+                                    var editor = CKEDITOR.replace( 'editor' );
+                                    CKFinder.setupCKEditor( editor );
+                                </script>
 								
-							
-							    toolbar: [
-							    [ 'Source', '-', 'Print', '-', 'Cut', 'Copy', 'Paste', 'PasteText', 'PasteFromWord', '-', 'Undo', 'Redo' ],			// Defines toolbar group without name.
-							    [ 'Find', 'Replace', '-', 'SelectAll', '-', 'Bold', 'Italic', 'Underline', 'Strike', 'Subscript', 'Superscript', '-', 'RemoveFormat' ],
-							    [ 'NumberedList', 'BulletedList', '-', 'Outdent', 'Indent', '-', 'Blockquote', 'CreateDiv', '-', 'JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock', '-', 'BidiLtr', 'BidiRtl', 'Language' ],
-							    [ 'Link', 'Unlink' ],
-							    [ 'Image', 'Table', 'HorizontalRule', 'Smiley', 'SpecialChar' ],
-							    [ 'Styles', 'Format', 'Font', 'FontSize' ],
-							    [ 'TextColor', 'BGColor' ],
-								['Youtube'],['Mp3Player']
-						],
-							    filebrowserBrowseUrl :'../editor/js/ckeditor/filemanager/browser/default/browser.html?Connector=http://doblecinco.com.ar/editor/js/ckeditor/filemanager/connectors/php/connector.php',
-							    filebrowserImageBrowseUrl : '../editor/js/ckeditor/filemanager/browser/default/browser.html?Type=Image&Connector=http://doblecinco.com.ar/editor/js/ckeditor/filemanager/connectors/php/connector.php',
-							    filebrowserFlashBrowseUrl :'../editor/js/ckeditor/filemanager/browser/default/browser.html?Type=Flash&Connector=http://doblecinco.com.ar/editor/js/ckeditor/filemanager/connectors/php/connector.php',
-										filebrowserUploadUrl  :'http://doblecinco.com.ar/editor/js/ckeditor/filemanager/connectors/php/upload.php?Type=File',
-										filebrowserImageUploadUrl : 'http://doblecinco.com.ar/editor/js/ckeditor/filemanager/connectors/php/upload.php?Type=Image',
-										filebrowserFlashUploadUrl : 'http://doblecinco.com.ar/editor/js/ckeditor/filemanager/connectors/php/upload.php?Type=Flash'
-										
-									});
-
-								//]]>
-								</script>
 							  </div>
 							</div>
                         
