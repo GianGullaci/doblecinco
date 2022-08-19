@@ -158,9 +158,9 @@
  				
 					$fase=7;
 					$fase2=0;
-					$titulo="Fase 2. <span style='color:#E42C1A;'>Torneo Apertura</span>";
-					$subtitulo1="Copa Campeonato";
-					$subtitulo2="Copa Competencia";
+					$titulo="Fase 2.";
+					$subtitulo1="<span style='color:#E42C1A;'>Copa Campeonato</span>";
+					$subtitulo2="<span style='color:#E42C1A;'>Copa Competencia</span>";
                     echo '<div class="container">';
 					include("posiciones/apertura-infantiles.php");
 					echo '</div>';

@@ -45,7 +45,9 @@
 					$titulo="Finalisima Juveniles";
 					$subtitulo1="Copa Campeonato";
 					$subtitulo2="Copa Competencia";
+					echo '<div class="container">';
 					include("posiciones/finalisima-menores.php");
+					echo '</div>';
 					$comienzan_desplegables=true;
 					$mostrarfase1=false;
  					
@@ -64,7 +66,9 @@
 					$titulo="Final Juveniles";
 					$subtitulo1="Copa Campeonato";
 					$subtitulo2="Copa Competencia";
+					echo '<div class="container">';
 					include("posiciones/final-menores.php");
+					echo '</div>';
 					$comienzan_desplegables=true;
  					$mostrarfase1=false;
  				}
@@ -83,7 +87,9 @@
 					$titulo="Final Menores";
 					$subtitulo1="Copa Campeonato";
 					$subtitulo2="Copa Competencia";
+					echo '<div class="container">';
 					include("posiciones/final-infantiles.php");
+					echo '</div>';
 					$comienzan_desplegables=true;
 					$mostrarfase1=false;
  					
@@ -102,7 +108,9 @@
 					$titulo="Semifinal Juveniles";
 					$subtitulo1="Copa Campeonato";
 					$subtitulo2="Copa Competencia";
+					echo '<div class="container">';
 					include("posiciones/semifinal-menores.php");
+					echo '</div>';
 					$comienzan_desplegables=true;
 					$mostrarfase1=false;
  					
@@ -122,7 +130,9 @@
 					$titulo="Fase 2";
 					$subtitulo1="<span style='color:#E42C1A;'>Copa Campeonato</span>";
 					$subtitulo2="<span style='color:#E42C1A;'>Copa Competencia</span>";
+					echo '<div class="container">';
 					include("posiciones/fase2-menores.php");
+					echo '</div>';
 					$comienzan_desplegables=true;
 					$mostrarfase1=false;
  					
@@ -141,7 +151,9 @@
 					$titulo="Fase 2. <span style='color:#E42C1A;'>Torneo Clausura</span>";
 					$subtitulo1="Copa Campeonato";
 					$subtitulo2="Copa Competencia";
+					echo '<div class="container">';
 					include("posiciones/clausura-infantiles.php");
+					echo '</div>';
 					$comienzan_desplegables=true;
 					$mostrarfase1=false;
  					
@@ -158,10 +170,12 @@
  				
 					$fase=7;
 					$fase2=0;
-					$titulo="Fase 2. <span style='color:#E42C1A;'>Torneo Apertura</span>";
-					$subtitulo1="Copa Campeonato";
-					$subtitulo2="Copa Competencia";
+					$titulo="Fase 2.";
+					$subtitulo1="<span style='color:#E42C1A;'>Copa Campeonato</span>";
+					$subtitulo2="<span style='color:#E42C1A;'>Copa Competencia</span>";
+					echo '<div class="container">';
 					include("posiciones/apertura-infantiles.php");
+					echo '</div>';
 					$comienzan_desplegables=true;
  					
  				}
@@ -173,7 +187,9 @@
 					$titulo="Fase 1";
 					$subtitulo1="Zona A";
 					$subtitulo2="Zona B";
+					echo '<div class="container">';
 					include("posiciones/fase1.php");
+					echo '</div>';
 				}
 				
 				
