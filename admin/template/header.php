@@ -6,6 +6,7 @@
     <title>ADMIN</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
 
     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
 
@@ -57,6 +58,7 @@
               <u1 class="dropdown-menu">
                 <l1><a class="dropdown-item" href="notas.php">Listado Notas</a></l1>
                 <l1><a class="dropdown-item" href="nuevo-nota.php">Cargar Nota</a></l1>
+                <l1><a class="dropdown-item" href="autores.php">Autores</a></l1>
               </u1>
             </l1>
             <l1 class="nav-item"><a class="nav-link" href="ciudades.php">Ciudades</a></l1>
