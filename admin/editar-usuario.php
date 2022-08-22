@@ -1,43 +1,91 @@
-<?php include 'template/header.php' ?>
+<?php 		include("head.php"); ?>
 
-<?php
-    if(!isset($_GET['id_admin'])){
-        header('Location: index.php?mensaje=error');
-        exit();
-    }
 
-    include_once '../model/conexion.php';
-    $id_admin = $_GET['id_admin'];
+<body>
+		<?php
+			include("header.php");
+		?>
+	
+		<div class="container-fluid-full">
+		<div class="row-fluid">
+				
+			<?php
+				include("menu-left.php");
+			?>
+			
+			<!-- start: Content -->
+			<div id="content" class="span10">
+			
+			
+			<ul class="breadcrumb">
+				<li>
+					<i class="icon-home"></i>
+					<a href="index.php">inicio</a>
+					<i class="icon-angle-right"></i> 
+				</li>
+				<li>
+					<i class="icon-edit"></i>
+					<a href="listado-usuarios.php">Usuarios</a>
+				</li>
+			</ul>
+			
+			<div class="row-fluid sortable">
+				<div class="box span12">
+					<div class="box-header" data-original-title>
+						<h2><i class="halflings-icon edit"></i><span class="break"></span>Editar Usuario</h2>
+						<div class="box-icon">
+							<a href="#" class="btn-minimize"><i class="halflings-icon chevron-up"></i></a>
+							<a href="#" class="btn-close"><i class="halflings-icon remove"></i></a>
+						</div>
+					</div>
+					<div class="box-content">
+						<form class="form-horizontal">
+						  <fieldset>
+							<div class="control-group">
+								<label class="control-label" for="focusedInput">Nombre</label>
+								<div class="controls">
+								  <input class="input-xlarge focused" id="focusedInput" type="text" value="">
+								</div>
+							  </div>
+							<div class="control-group">
+								<label class="control-label" for="focusedInput">E-mail</label>
+								<div class="controls">
+								  <input class="input-xlarge focused" id="focusedInput" type="text" value="">
+								</div>
+							  </div>
+							  
+							
+							<div class="form-actions">
+							  <button type="submit" class="btn btn-primary">Guardar</button>
+							  <button type="reset" class="btn">Cancelar</button>
+							</div>
+						  </fieldset>
+						</form>   
 
-    $sentencia = $bd->prepare("select * from administradores where id_administrador = ?;");
-    $sentencia->execute([$id_admin]);
-    $admin = $sentencia->fetch(PDO::FETCH_OBJ);
-?>
+					</div>
+				</div><!--/span-->
 
-<div class="container mt-5">
-    <div class="row justify-content-center">
-        <div class="col-md-4">
-        <div class="card">
-                <div class="card-header">
-                    Editar datos
-                </div>
-                <form  class="p-4" method="POST" action="editar-usuario-proceso.php" enctype="multipart/form-data">
-                    <div class="mb-3">
-                        <label class="form-label">Nombre: </label>
-                        <input type="text" class="form-control" name="txtNombre" autofocus required value="<?php echo $admin->nombre; ?>">
-                        <label class="form-label">Usuario: </label>
-                        <input type="text" class="form-control" name="txtUsuario" autofocus required value="<?php echo $admin->nombre_usuario; ?>">
-                        <label class="form-label">Contraseña: </label>
-                        <input type="password" class="form-control" name="txtContraseña" autofocus required value="<?php echo $admin->password; ?>">
-                    </div>
-                    <div class="d-grid">
-                        <input type="hidden" name="id_admin" value="<?php echo $admin->id_administrador; ?>">
-                        <input type="submit" class="btn btn-primary" value="Guardar">
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-</div>
+			</div><!--/row-->
 
-<?php include 'template/footer.php' ?>
+			
+    
+
+	</div><!--/.fluid-container-->
+	
+			<!-- end: Content -->
+		</div><!--/#content.span10-->
+		</div><!--/fluid-row-->
+		
+	
+	
+	<div class="clearfix"></div>
+	
+	<?php
+		include("footer.php");
+		include("javascript.php");
+	?>
+	
+	
+	
+</body>
+</html>

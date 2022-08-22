@@ -1,138 +1,186 @@
-<?php include 'template/header.php' ?>
+<?php 		include("head.php"); ?>
 
-<?php
-    include_once "../model/conexion.php";
-    $sentencia = $bd -> query("select * from ciudades ORDER BY ciudades.nombre ASC");
-    $ciudades = $sentencia->fetchAll(PDO::FETCH_OBJ);
-?>
+<body>
+		<?php
+			include("header.php");
+		?>
+	
+		<div class="container-fluid-full">
+		<div class="row-fluid">
+				
+			<?php
+				include("menu-left.php");
+			?>
+			
+			
+			
+			
+			<!-- start: Content -->
+			<div id="content" class="span10">
+			
+			
+			<ul class="breadcrumb">
+				<li>
+					<i class="icon-home"></i>
+					<a href="index.php">inicio</a> 
+					<i class="icon-angle-right"></i>
+				</li>
+				<li><a href="#">Ciudades </a></li>
+			</ul>
+			
+			<div class="row-fluid sortable">		
+				<div class="box span12">
+					<a class="btn btn-primary" type="button" href="#nuevo">Agregar Otra</a>
+					<div class="box-header" data-original-title>
+						<h2><i class="halflings-icon user"></i><span class="break"></span>Ciudades</h2>
+						
+						<div class="box-icon">
+							<a href="#" class="btn-minimize"><i class="halflings-icon chevron-up"></i></a>
+							<a href="#" class="btn-close"><i class="halflings-icon remove"></i></a>
+						</div>
+					</div>
+					<div class="box-content">
+						<table class="table table-striped table-bordered bootstrap-datatable datatable" id="tabla-ciudades">
+						  <thead>
+							  <tr>
+								  <th>Nombre</th>
+								  <th>Acciones</th>
+							  </tr>
+						  </thead>   
+						  <tbody>
+						  
+							<?php
+								$query = "SELECT * FROM ciudades order by nombre" or die("Error in the consult.." . mysqli_error($mysqli));
+								$result = $mysqli->query($query); 
+								while($row = mysqli_fetch_array($result)) {
+									echo "<tr id='record-".$row['id_ciudad']."'>";
+									echo "<td>".ucfirst($row['nombre'])."</td>";
+									echo "<td class='center'>";
+									echo "<a class='btn btn-danger' href='?delete=".$row['id_ciudad']."'>";
+									echo "<i class='halflings-icon white trash'></i>";
+									echo "</a>";
+									echo "</td>";
+									echo "</tr>";
+								}
+							?>
+							
+						  </tbody>
+					  </table>            
+					</div>
+					
+					<div class="box-header" data-original-title id="nuevo">
+						<h2><i class="halflings-icon edit"></i><span class="break"></span>Nueva Ciudad</h2>
+						<div class="box-icon">
+							<a href="#" class="btn-minimize"><i class="halflings-icon chevron-up"></i></a>
+							<a href="#" class="btn-close"><i class="halflings-icon remove"></i></a>
+						</div>
+					</div>
+					<div class="box-content">
+						<form class="form-horizontal" id="form-ciudades">
+						  <fieldset>
+							
+							  <div class="control-group">
+								<label class="control-label" for="focusedInput">Nombre</label>
+								<div class="controls">
+								  <input class="input-xlarge focused" required id="nombre" type="text" value="">
+								</div>
+							  </div>
 
-<div class="container my-5">
-    <div class="row justify-content-center g-4">
-    <div class="col-lg-4">
-            <div class="card">
-                <div class="card-header">
-                    Ingresar datos
-                </div>
-                <form  class="p-4" method="POST" action="nuevo-ciudad.php">
-                    <div class="mb-3">
-                        <label class="form-label">Nombre: </label>
-                        <input type="text" class="form-control" name="txtNombre" autofocus required>
-                    </div>
-                    <div class="d-grid">
-                        <input type="hidden" name="oculto" value="1">
-                        <input type="submit" class="btn btn-primary" value="Guardar">
-                    </div>
-                </form>
-            </div>
-        </div>
-        <div class="col-lg-8">
+							<div class="form-actions">
+							  <button type="submit" class="btn btn-primary nueva-ciudad">Guardar</button>
+							  <button type="reset" class="btn">Cancelar</button>
+							</div>
+						  </fieldset>
+						</form>   
 
-            <!-- inicio alerta-->
-            
-            <?php
-                if(isset($_GET['mensaje']) and $_GET['mensaje'] == 'falta'){
-            ?>
-            <div class="alert alert-danger alert-dismissible fade show" role="alert">          
-                <strong>Error!</strong> Falta ingresar el nombre
-                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-            </div>
-            <?php
-                }
-            ?>
+					</div>
+					
+				</div><!--/span-->
+			
+			</div><!--/row-->
 
-            <?php
-                if(isset($_GET['mensaje']) and $_GET['mensaje'] == 'registrado'){
-            ?>
-            <div class="alert alert-success alert-dismissible fade show" role="alert">          
-                <strong>Registrado!</strong> Se agregaron los datos
-                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-            </div>
-            <?php
-                }
-            ?>
+			
+			
+			
+			
+			
+    
 
-            <?php
-                if(isset($_GET['mensaje']) and $_GET['mensaje'] == 'error'){
-            ?>
-            <div class="alert alert-danger alert-dismissible fade show" role="alert">          
-                <strong>Error!</strong> Vuelve a intentar.
-                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-            </div>
-            <?php
-                }
-            ?>
-
-            <?php
-                if(isset($_GET['mensaje']) and $_GET['mensaje'] == 'editado'){
-            ?>
-            <div class="alert alert-success alert-dismissible fade show" role="alert">          
-                <strong>Editado!</strong> Se editaron los datos
-                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-            </div>
-            <?php
-                }
-            ?>
-
-            <?php
-                if(isset($_GET['mensaje']) and $_GET['mensaje'] == 'eliminado'){
-            ?>
-            <div class="alert alert-warning alert-dismissible fade show" role="alert">          
-                <strong>Eliminado!</strong> Se eliminaron los datos
-                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-            </div>
-            <?php
-                }
-            ?>
-
-            <?php
-                if(isset($_GET['mensaje']) and $_GET['mensaje'] == 'JugadoresAsociados'){
-            ?>
-            <div class="alert alert-danger alert-dismissible fade show" role="alert">          
-                <strong>Error!</strong> Posee jugadores asociados.
-                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-            </div>
-            <?php
-                }
-            ?>
-
-            <!-- fin alerta-->
-
-
-            <div class="card">
-                <div class="card-header">
-                    Lista de Ciudades
-                </div>
-                <div class="p-4 table-responsive">
-                    <table class="table align-middle">
-                        <thead>
-                            <tr>
-                                <!--<th scope="col">#</th>-->
-                                <th scope="col">Nombre</th>
-                                <th scope="col" colspan="2">Opciones</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <?php
-                                foreach($ciudades as $dato){
-                            ?>
-
-                            <tr>
-                                <td><?php echo $dato->nombre; ?></td>
-                                <td><a class="text-success" href="editar-ciudad.php?id_ciudad=<?php echo $dato->id_ciudad;?>"><i class="bi bi-pencil-square"></i></a></td>
-                                <td><a onclick="return confirm('Estás seguro de eliminar?');" class="text-danger" href="eliminar-ciudad.php?id_ciudad=<?php echo $dato->id_ciudad;?>"><i class="bi bi-trash-fill"></i></a></td>
-                            </tr>
-
-                            <?php
-                                }
-                            ?>
-
-                        </tbody>
-                    </table>
-                    
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<?php include 'template/footer.php' ?>
+	</div><!--/.fluid-container-->
+	
+			<!-- end: Content -->
+		</div><!--/#content.span10-->
+		</div><!--/fluid-row-->
+		
+	
+	
+	<div class="clearfix"></div>
+	
+	<?php
+		include("footer.php");
+		include("javascript.php");
+	?>
+	
+	<script>
+	$(document).ready(function() {
+// 		$('a.btn-danger').click(function(e) {
+		$( '#tabla-ciudades' ).on( 'click', 'a', function(e) {
+			e.preventDefault();
+			if (confirm("Esta seguro que desea eliminar el registro?")){
+				var parent = $(this).closest('tr');
+				var table = $('#tabla-ciudades').DataTable();
+				$("#"+parent.attr('id')).removeClass("odd");
+				$("#"+parent.attr('id')).removeClass("even");
+				$("#"+parent.attr('id')).addClass("selected");
+				
+				$.ajax({
+					type: 'get',
+					url: 'delete-ciudad.php',
+					data: 'ajax=1&delete=' + parent.attr('id').replace('record-',''),
+					success: function(data) {
+						var res = $.parseJSON(data);
+						if (res.deleted==true){
+						  table.row('.selected').remove().draw( false );
+						}
+						else{	
+						  alert("El registro no puede ser eliminado (posee jugadores asociados)");
+						}
+					}
+				});
+			}
+		});
+		
+		$('button.nueva-ciudad').click(function(e) {
+		    var f = document.getElementById('form-ciudades');
+		    f.checkValidity();
+		    if (f.checkValidity()){
+			e.preventDefault();
+			var texto = $('#nombre').val();
+			var t = $('#tabla-ciudades').DataTable();
+			$.ajax({
+				type: 'get',
+				url: 'add-ciudad.php',
+				data: 'ajax=1&add=' + texto,
+				success: function(data) {
+					var res = $.parseJSON(data);					
+					t.row.add( [
+						texto,
+						'<a class="btn btn-danger" id="new" href="?delete='+res.id+'"><i class="halflings-icon white trash"></i></a>'
+					] ).draw();
+					//obtengo el link con el id new
+					var link = $('#new');
+					//obtengo su tr
+					var tr = link.closest('tr');
+					//le asigno el id
+					tr.attr('id', 'record-'+res.id);
+					//le quito el id al link
+					link.attr('id', '');
+				}
+			});
+		    }
+		});
+	});
+</script>
+	
+</body>
+</html>

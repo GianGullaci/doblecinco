@@ -1,0 +1,70 @@
+[09-Apr-2019 12:00:51 America/Argentina/Buenos_Aires] PHP Warning:  POST Content-Length of 22399713 bytes exceeds the limit of 8388608 bytes in Unknown on line 0
+[09-Apr-2019 12:09:39 America/Argentina/Buenos_Aires] PHP Warning:  POST Content-Length of 22399711 bytes exceeds the limit of 8388608 bytes in Unknown on line 0
+[28-May-2019 11:24:24 America/Argentina/Buenos_Aires] PHP Fatal error:  Call to a member function execute() on boolean in /home/doble5jl/public_html/admin/nueva-nota.php on line 26
+[28-May-2019 11:26:13 America/Argentina/Buenos_Aires] PHP Fatal error:  Call to a member function execute() on boolean in /home/doble5jl/public_html/admin/nueva-nota.php on line 26
+[28-May-2019 11:26:27 America/Argentina/Buenos_Aires] PHP Fatal error:  Call to a member function execute() on boolean in /home/doble5jl/public_html/admin/nueva-nota.php on line 26
+[28-May-2019 11:26:54 America/Argentina/Buenos_Aires] PHP Fatal error:  Call to a member function execute() on boolean in /home/doble5jl/public_html/admin/nueva-nota.php on line 26
+[28-May-2019 11:30:24 America/Argentina/Buenos_Aires] PHP Fatal error:  Call to a member function execute() on boolean in /home/doble5jl/public_html/admin/nueva-nota.php on line 26
+[28-May-2019 11:30:58 America/Argentina/Buenos_Aires] PHP Fatal error:  Call to a member function execute() on boolean in /home/doble5jl/public_html/admin/nueva-nota.php on line 26
+[28-May-2019 11:31:02 America/Argentina/Buenos_Aires] PHP Fatal error:  Call to a member function execute() on boolean in /home/doble5jl/public_html/admin/nueva-nota.php on line 26
+[28-May-2019 11:31:19 America/Argentina/Buenos_Aires] PHP Fatal error:  Call to a member function execute() on boolean in /home/doble5jl/public_html/admin/nueva-nota.php on line 26
+[28-May-2019 11:31:49 America/Argentina/Buenos_Aires] PHP Fatal error:  Call to a member function execute() on boolean in /home/doble5jl/public_html/admin/nueva-nota.php on line 26
+[28-May-2019 11:32:49 America/Argentina/Buenos_Aires] PHP Fatal error:  Call to a member function execute() on boolean in /home/doble5jl/public_html/admin/nueva-nota.php on line 26
+[28-May-2019 11:40:17 America/Argentina/Buenos_Aires] PHP Fatal error:  Call to a member function execute() on boolean in /home/doble5jl/public_html/admin/nueva-nota.php on line 26
+[28-May-2019 11:41:31 America/Argentina/Buenos_Aires] PHP Fatal error:  Call to a member function execute() on boolean in /home/doble5jl/public_html/admin/nueva-nota.php on line 26
+[28-May-2019 12:07:23 America/Argentina/Buenos_Aires] PHP Fatal error:  Call to a member function execute() on boolean in /home/doble5jl/public_html/admin/nueva-nota.php on line 26
+[28-May-2019 12:56:06 America/Argentina/Buenos_Aires] PHP Fatal error:  Call to a member function execute() on boolean in /home/doble5jl/public_html/admin/editar-nota.php on line 29
+[28-May-2019 12:56:57 America/Argentina/Buenos_Aires] PHP Fatal error:  Call to a member function execute() on boolean in /home/doble5jl/public_html/admin/editar-nota.php on line 29
+[28-May-2019 12:57:48 America/Argentina/Buenos_Aires] PHP Fatal error:  Call to a member function execute() on boolean in /home/doble5jl/public_html/admin/editar-nota.php on line 29
+[28-May-2019 12:57:59 America/Argentina/Buenos_Aires] PHP Fatal error:  Call to a member function execute() on boolean in /home/doble5jl/public_html/admin/editar-nota.php on line 29
+[28-May-2019 12:58:05 America/Argentina/Buenos_Aires] PHP Fatal error:  Call to a member function execute() on boolean in /home/doble5jl/public_html/admin/editar-nota.php on line 29
+[28-May-2019 12:58:20 America/Argentina/Buenos_Aires] PHP Fatal error:  Call to a member function execute() on boolean in /home/doble5jl/public_html/admin/editar-nota.php on line 29
+[28-May-2019 13:21:59 America/Argentina/Buenos_Aires] PHP Fatal error:  Call to a member function execute() on boolean in /home/doble5jl/public_html/admin/editar-nota.php on line 29
+[28-May-2019 13:27:44 America/Argentina/Buenos_Aires] PHP Fatal error:  Call to a member function execute() on boolean in /home/doble5jl/public_html/admin/editar-nota.php on line 29
+[25-Jun-2019 11:14:50 America/Argentina/Buenos_Aires] PHP Fatal error:  Call to a member function execute() on boolean in /home/doble5jl/public_html/admin/nueva-nota.php on line 26
+[17-Nov-2019 14:19:33 America/Argentina/Buenos_Aires] PHP Warning:  move_uploaded_file(../images/notas/913/913/home.jpg): failed to open stream: No such file or directory in /home/doble5jl/public_html/admin/editar-nota.php on line 181
+[17-Nov-2019 14:19:33 America/Argentina/Buenos_Aires] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpsYKIrA' to '../images/notas/913/913/home.jpg' in /home/doble5jl/public_html/admin/editar-nota.php on line 181
+[17-Nov-2019 14:19:33 America/Argentina/Buenos_Aires] PHP Warning:  move_uploaded_file(../images/notas/913/913/913/celular.jpg): failed to open stream: No such file or directory in /home/doble5jl/public_html/admin/editar-nota.php on line 232
+[17-Nov-2019 14:19:33 America/Argentina/Buenos_Aires] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpFFzBlp' to '../images/notas/913/913/913/celular.jpg' in /home/doble5jl/public_html/admin/editar-nota.php on line 232
+[17-Nov-2019 14:21:28 America/Argentina/Buenos_Aires] PHP Warning:  move_uploaded_file(../images/notas/913/913/celular.jpg): failed to open stream: No such file or directory in /home/doble5jl/public_html/admin/editar-nota.php on line 232
+[17-Nov-2019 14:21:28 America/Argentina/Buenos_Aires] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpFQ7PPX' to '../images/notas/913/913/celular.jpg' in /home/doble5jl/public_html/admin/editar-nota.php on line 232
+[19-Nov-2019 23:32:46 America/Argentina/Buenos_Aires] PHP Fatal error:  Call to a member function execute() on boolean in /home/doble5jl/public_html/admin/nueva-sancion.php on line 15
+[19-Nov-2019 23:32:51 America/Argentina/Buenos_Aires] PHP Fatal error:  Call to a member function execute() on boolean in /home/doble5jl/public_html/admin/nueva-sancion.php on line 15
+[21-Nov-2019 13:03:22 America/Argentina/Buenos_Aires] PHP Fatal error:  Call to undefined function select_equipos() in /home/doble5jl/public_html/admin/nueva-sancion.php on line 156
+[21-Nov-2019 13:27:58 America/Argentina/Buenos_Aires] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home/doble5jl/public_html/admin/listado-sanciones.php on line 73
+[21-Nov-2019 13:28:03 America/Argentina/Buenos_Aires] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home/doble5jl/public_html/admin/listado-sanciones.php on line 73
+[21-Nov-2019 13:28:25 America/Argentina/Buenos_Aires] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home/doble5jl/public_html/admin/listado-sanciones.php on line 73
+[21-Nov-2019 13:28:30 America/Argentina/Buenos_Aires] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home/doble5jl/public_html/admin/listado-sanciones.php on line 73
+[03-Jan-2020 15:33:37 America/Argentina/Buenos_Aires] PHP Warning:  move_uploaded_file(../images/notas/926/926/celular.jpg): failed to open stream: No such file or directory in /home/doble5jl/public_html/admin/editar-nota.php on line 232
+[03-Jan-2020 15:33:37 America/Argentina/Buenos_Aires] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpsZjRPG' to '../images/notas/926/926/celular.jpg' in /home/doble5jl/public_html/admin/editar-nota.php on line 232
+[03-Jan-2020 15:35:11 America/Argentina/Buenos_Aires] PHP Warning:  move_uploaded_file(../images/notas/926/926/celular.jpg): failed to open stream: No such file or directory in /home/doble5jl/public_html/admin/editar-nota.php on line 232
+[03-Jan-2020 15:35:11 America/Argentina/Buenos_Aires] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpG7XuZJ' to '../images/notas/926/926/celular.jpg' in /home/doble5jl/public_html/admin/editar-nota.php on line 232
+[13-Jul-2020 14:56:21 America/Argentina/Buenos_Aires] PHP Warning:  move_uploaded_file(../images/notas/969/969/home.jpg): failed to open stream: No such file or directory in /home/doble5jl/public_html/admin/editar-nota.php on line 181
+[13-Jul-2020 14:56:21 America/Argentina/Buenos_Aires] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpY8pwB4' to '../images/notas/969/969/home.jpg' in /home/doble5jl/public_html/admin/editar-nota.php on line 181
+[13-Jul-2020 14:56:21 America/Argentina/Buenos_Aires] PHP Warning:  move_uploaded_file(../images/notas/969/969/969/celular.jpg): failed to open stream: No such file or directory in /home/doble5jl/public_html/admin/editar-nota.php on line 232
+[13-Jul-2020 14:56:21 America/Argentina/Buenos_Aires] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpowbDKq' to '../images/notas/969/969/969/celular.jpg' in /home/doble5jl/public_html/admin/editar-nota.php on line 232
+[20-Jul-2020 19:56:43 America/Argentina/Buenos_Aires] PHP Warning:  move_uploaded_file(../images/notas/972/972/home.jpg): failed to open stream: No such file or directory in /home/doble5jl/public_html/admin/editar-nota.php on line 181
+[20-Jul-2020 19:56:43 America/Argentina/Buenos_Aires] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/php8YlSod' to '../images/notas/972/972/home.jpg' in /home/doble5jl/public_html/admin/editar-nota.php on line 181
+[19-Aug-2021 21:09:14 America/Argentina/Buenos_Aires] PHP Fatal error:  Call to a member function format() on boolean in /home2/doble5jl/public_html/admin/nuevo-partido.php on line 8
+[19-Aug-2021 21:09:18 America/Argentina/Buenos_Aires] PHP Fatal error:  Call to a member function format() on boolean in /home2/doble5jl/public_html/admin/nuevo-partido.php on line 8
+[19-Aug-2021 21:09:24 America/Argentina/Buenos_Aires] PHP Fatal error:  Call to a member function format() on boolean in /home2/doble5jl/public_html/admin/nuevo-partido.php on line 8
+[16-Sep-2021 22:39:14 America/Argentina/Buenos_Aires] PHP Fatal error:  Call to a member function format() on boolean in /home2/doble5jl/public_html/admin/nuevo-partido.php on line 8
+[16-Sep-2021 22:39:20 America/Argentina/Buenos_Aires] PHP Fatal error:  Call to a member function format() on boolean in /home2/doble5jl/public_html/admin/nuevo-partido.php on line 8
+[01-Oct-2021 18:58:18 America/Argentina/Buenos_Aires] PHP Fatal error:  Call to a member function format() on boolean in /home2/doble5jl/public_html/admin/nuevo-partido.php on line 8
+[01-Oct-2021 18:58:34 America/Argentina/Buenos_Aires] PHP Fatal error:  Call to a member function format() on boolean in /home2/doble5jl/public_html/admin/nuevo-partido.php on line 8
+[01-Oct-2021 19:00:43 America/Argentina/Buenos_Aires] PHP Fatal error:  Call to a member function format() on boolean in /home2/doble5jl/public_html/admin/nuevo-partido.php on line 8
+[13-Oct-2021 22:54:11 America/Argentina/Buenos_Aires] PHP Fatal error:  Call to a member function format() on boolean in /home2/doble5jl/public_html/admin/nuevo-partido.php on line 8
+[13-Oct-2021 22:54:16 America/Argentina/Buenos_Aires] PHP Fatal error:  Call to a member function format() on boolean in /home2/doble5jl/public_html/admin/nuevo-partido.php on line 8
+[13-Oct-2021 22:54:21 America/Argentina/Buenos_Aires] PHP Fatal error:  Call to a member function format() on boolean in /home2/doble5jl/public_html/admin/nuevo-partido.php on line 8
+[13-Oct-2021 22:54:32 America/Argentina/Buenos_Aires] PHP Fatal error:  Call to a member function format() on boolean in /home2/doble5jl/public_html/admin/nuevo-partido.php on line 8
+[13-Oct-2021 22:54:42 America/Argentina/Buenos_Aires] PHP Fatal error:  Call to a member function format() on boolean in /home2/doble5jl/public_html/admin/nuevo-partido.php on line 8
+[13-Oct-2021 22:55:07 America/Argentina/Buenos_Aires] PHP Fatal error:  Call to a member function format() on boolean in /home2/doble5jl/public_html/admin/nuevo-partido.php on line 8
+[14-Oct-2021 11:40:54 America/Argentina/Buenos_Aires] PHP Fatal error:  Call to a member function format() on boolean in /home2/doble5jl/public_html/admin/nuevo-partido.php on line 8
+[14-Oct-2021 11:52:58 America/Argentina/Buenos_Aires] PHP Fatal error:  Call to a member function format() on boolean in /home2/doble5jl/public_html/admin/nuevo-partido.php on line 8
+[15-Oct-2021 18:07:18 America/Argentina/Buenos_Aires] PHP Fatal error:  Call to a member function format() on boolean in /home2/doble5jl/public_html/admin/nuevo-partido.php on line 8
+[04-Nov-2021 22:29:54 America/Argentina/Buenos_Aires] PHP Fatal error:  Call to a member function format() on boolean in /home2/doble5jl/public_html/admin/nuevo-partido.php on line 8
+[04-Nov-2021 23:02:14 America/Argentina/Buenos_Aires] PHP Fatal error:  Call to a member function format() on boolean in /home2/doble5jl/public_html/admin/nuevo-partido.php on line 8
+[15-Apr-2022 16:25:57 America/Argentina/Buenos_Aires] PHP Warning:  move_uploaded_file(../images/notas/1077/1077/home.jpg): failed to open stream: No such file or directory in /home2/doble5jl/public_html/admin/editar-nota.php on line 181
+[15-Apr-2022 16:25:57 America/Argentina/Buenos_Aires] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpWs0DCj' to '../images/notas/1077/1077/home.jpg' in /home2/doble5jl/public_html/admin/editar-nota.php on line 181
+[15-Apr-2022 16:25:57 America/Argentina/Buenos_Aires] PHP Warning:  move_uploaded_file(../images/notas/1077/1077/1077/celular.jpg): failed to open stream: No such file or directory in /home2/doble5jl/public_html/admin/editar-nota.php on line 232
+[15-Apr-2022 16:25:57 America/Argentina/Buenos_Aires] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpprJTVh' to '../images/notas/1077/1077/1077/celular.jpg' in /home2/doble5jl/public_html/admin/editar-nota.php on line 232
