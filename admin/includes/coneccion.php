@@ -1,5 +1,5 @@
 <?php    
-   $mysqli = new mysqli("localhost", "doble5jl_user", "Racing123club", "doble5jl_db");
+   $mysqli = new mysqli("localhost", "root", "", "doble5jl_db");
 
   /* comprobar la conexi�n */
   if (mysqli_connect_errno()) {
