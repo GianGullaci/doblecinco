@@ -57,10 +57,6 @@ while($row_general2 = mysqli_fetch_array($result_general2)) {
 }
 
 if ($started_cascara){
-
-	$leyenda="General corresponde a la suma de las 6 categorías";
-	
-	echo '<li>'.$leyenda.'</li>';
 	echo '</ul></div>';
 
 }
