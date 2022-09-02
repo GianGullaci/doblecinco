@@ -108,7 +108,7 @@
  					
  				}
 				
-				$query_fase = "select * 
+				/*$query_fase = "select * 
  					FROM resultados_partidos
  					
  					where (id_torneo=".$torneo_infantiles." or id_torneo=".$torneo_menores.") 
@@ -166,8 +166,27 @@
 					echo '</div>';
 					$comienzan_desplegables=true;
  					
- 				}
- 				
+ 				}*/
+
+				 $query_fase = "select * 
+				 FROM resultados_partidos
+				 
+				 where (id_torneo=".$torneo_infantiles." or id_torneo=".$torneo_menores.") 
+				 AND (fase=7 or fase=2)";
+			 	$result_fase = $mysqli->query($query_fase); 
+				if ($row_fase = mysqli_fetch_array($result_fase)){
+				
+					$fase=2;
+					$fase2=7;
+					$titulo="Fase 2";
+					$subtitulo1="Zona A";
+					$subtitulo2="Zona B";
+					echo '<div class="container">';
+					include("posiciones/fase2.php");
+					echo '</div>';
+					$comienzan_desplegables=true;
+					
+				} 				
  				
 				
 				$fase=1;
