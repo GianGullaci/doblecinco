@@ -23,6 +23,8 @@
 			
 			if ($torneos){
 			
+				$mostrarfase1=true;
+			
 				//hay torneos para mostrar --> los muestro por fases
 			
 				//mostramos todas las fases (quizas algunas no estén jugadas, y por ello para saber el título, tendremos una variable que lo determine)
@@ -178,15 +180,26 @@
  				}
  				
  				
-				$fase=1;
-				$fase2=6;
-				$titulo="Fase 1";
-				$subtitulo1="Zona A";
-				$subtitulo2="Zona B";
-				echo '<div class="container">';
-				include("posiciones/fase1.php");
-				echo '</div>';
+				if ($mostrarfase1){
+					$fase=1;
+					$fase2=6;
+					$titulo="Fase 1";
+					$subtitulo1="Zona A";
+					$subtitulo2="Zona B";
+					echo '<div class="container">';
+					include("posiciones/fase1.php");
+					echo '</div>';
+				}
 				
+				
+				
+				echo '
+					
+						<div>
+							<a class="citas" href="posiciones/cita_posicionespu.php">'.$texto_cita_posiciones.'</a>
+						</div>
+					
+					';
 
 			}
 		?>
