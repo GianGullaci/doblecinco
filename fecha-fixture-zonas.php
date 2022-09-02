@@ -57,6 +57,7 @@
 			
 			//en este while se mostrara el listado superior con cada fecha
 			$fase_actual="";
+			echo '<ul class="nav nav-pills mb-3 flex align-items-center" id="pills-tab" role="tablist">';
 			while($row_fecha = mysqli_fetch_array($result_fecha)) {
 
 				if ($row_fecha['fase']!=$fase_actual){
@@ -95,8 +96,8 @@
 					      $fase_a_mostrar = "Final";
 					}
 					
-					echo '<ul class="nav nav-pills mb-3 flex align-items-center" id="pills-tab" role="tablist">
-					<div class="fw-bold" >'.$fase_a_mostrar.'</div>';
+					
+					echo '<div class="fw-bold" >'.$fase_a_mostrar.'</div>';
 				}
 				echo '<li class="nav-item" role="presentation">
 						<button class="nav-link'; if ($row_fecha['id_fecha']==$fecha_menores_home_tab or $row_fecha['id_fecha']==$fecha_infantiles_home_tab){
