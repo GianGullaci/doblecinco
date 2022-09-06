@@ -261,7 +261,7 @@
 							<tr>
 								<th colspan="6">Zona '.$zona.'</th>
 								<th>Dia</th>
-								<th>Ficha</th>
+								<th></th>
 							</tr>
 							</thead>
 							<tbody>
@@ -426,7 +426,7 @@
 							<tr>
 								<th colspan="6">Zona '.$zona.'</th>
 								<th>Dia</th>
-								<th>Ficha</th>
+								<th></th>
 							</tr>
 							</thead>
 							<tbody>

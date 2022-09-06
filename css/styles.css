@@ -149,8 +149,12 @@ p img {
 
 @media (max-width: 500px) {
   td, th{
-    padding:.5rem .05rem !important;
+    padding:.3rem .03rem !important;
     padding-bottom: .01rem !important;
+  }
+
+  .container {
+    padding-left: 1px;
   }
 
   .img-long {

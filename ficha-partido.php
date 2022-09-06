@@ -35,24 +35,24 @@
 
     	
 			
-	<table class="">
+	<table class="table">
 				<tbody>
 
-					<tr style="background:#A9E8FA;">
+					<tr class="table-primary">
 						<td>
 							  <img src="img/clubes/<?=$row_partido['id_local']?>/<?=$row_partido['logo_local']?>" width="30" />
 						</td>
-						<td><b><?=$row_partido['nombre_local']?></b></td>
-						<td><span class="goles"><?=$row_partido['goles_local']?></span></td>
-						<td><span class="goles"><?=$row_partido['goles_visitante']?></span></td>
+						<td><h6><b><?=$row_partido['nombre_local']?></b></h6></td>
+						<td><h6><span class="badge bg-primary"><?=$row_partido['goles_local']?></span></h6></td>
+						<td><h6><span class="badge bg-primary"><?=$row_partido['goles_visitante']?></span></h6></td>
 						<td >
 							<img src="img/clubes/<?=$row_partido['id_visitante']?>/<?=$row_partido['logo_visitante']?>" width="30" />
 						</td>
-						<td><b><?=$row_partido['nombre_visitante']?></b></td>
+						<td><h6><b><?=$row_partido['nombre_visitante']?></b></h6></td>
 					</tr>
 									
-					<tr style="background:#A9E8FA;">
-						<td colspan='6'  style="background:#A9E8FA;"><b>Goles:</b></td>
+					<tr class="table-success">
+						<td colspan='6' class="table-success"><b>Goles:</b></td>
 					</tr>
 					
 					<?php
@@ -118,8 +118,8 @@
 						}
 					?>
 					
-					<tr style="background:#A9E8FA;">
-						<td colspan='6' style="background:#A9E8FA;"><b>Expulsiones:</b></td>
+					<tr class="table-danger">
+						<td colspan='6' class="table-danger"><b>Expulsiones:</b></td>
 					</tr>
 					
 					<?php

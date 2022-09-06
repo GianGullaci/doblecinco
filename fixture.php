@@ -148,7 +148,7 @@
 
 	<button type="button" class="btn-close mr-2" data-bs-dismiss="modal" aria-label="Close"></button>
 
-	<div class="modal-dialog modal-lg modal-dialog-centered">
+	<div class="modal-dialog modal-md modal-dialog-centered">
 		<div id="ficha-partido" class="modal-content">
 			
 		</div>
