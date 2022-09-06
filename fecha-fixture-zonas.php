@@ -261,6 +261,7 @@
 							<tr>
 								<th colspan="6">Zona '.$zona.'</th>
 								<th>Dia</th>
+								<th>Ficha</th>
 							</tr>
 							</thead>
 							<tbody>
@@ -291,7 +292,9 @@
 								<img src="img/clubes/'.$row_partido['id_visitante'].'/'.$row_partido['logo_visitante'].'" width="24" />
 							</td>
 							<td>'.$fecha_partido.'</td>
+							<td style="text-align: center;"><a onclick="obtenerId('.$row_partido['id_partido'].')" title="" href="" data-bs-toggle="modal" data-bs-target="#ficha"><i class="bi bi-plus-square-fill"></i></a></td>
 						</tr>
+
 						
 					
 					';
@@ -423,6 +426,7 @@
 							<tr>
 								<th colspan="6">Zona '.$zona.'</th>
 								<th>Dia</th>
+								<th>Ficha</th>
 							</tr>
 							</thead>
 							<tbody>
@@ -453,6 +457,7 @@
 								<img src="img/clubes/'.$row_partido['id_visitante'].'/'.$row_partido['logo_visitante'].'" width="24" />
 							</td>
 							<td>'.$fecha_partido.'</td>
+							<td style="text-align: center;"><a onclick="obtenerId('.$row_partido['id_partido'].')" title="" href="" data-bs-toggle="modal" data-bs-target="#ficha"><i class="bi bi-plus-square-fill"></i></a></td>
 						</tr>
 						
 					
@@ -478,3 +483,4 @@
 			
 		?>
 	</div>
+
