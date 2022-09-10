@@ -63,7 +63,7 @@ class elFinderVolumeMySQL extends elFinderVolumeDriver {
 		$opts = array(
 			'host'          => 'localhost',
 			'user'          => 'doble5jl_user',
-			'pass'          => 'marilina01',
+			'pass'          => 'Racing123club',
 			'db'            => 'doble5jl_db',
 			'port'          => null,
 			'socket'        => null,

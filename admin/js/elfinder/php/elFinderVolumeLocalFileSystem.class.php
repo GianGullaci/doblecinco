@@ -64,7 +64,7 @@ class elFinderVolumeLocalFileSystem extends elFinderVolumeDriver {
 		$this->options['quarantine'] = '.quarantine';  // quarantine folder name - required to check archive (must be hidden)
 		$this->options['maxArcFilesSize'] = 0;        // max allowed archive files size (0 - no limit)
 		
-		$this->db = new mysqli('localhost', 'doble5jl_user', 'marilina01', 'doble5jl_db', null, null);
+		$this->db = new mysqli('localhost', 'doble5jl_user', 'Racing123club', 'doble5jl_db', null, null);
 		if ($this->db->connect_error || @mysqli_connect_error()) {
 			return false;
 		}
