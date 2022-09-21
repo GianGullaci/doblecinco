@@ -118,17 +118,17 @@
 								  <div style="clear:both"></div>
 								  <label class="radio">
 									<input type="radio" name="fase" id="optionsRadios3" value="3">
-									PlayOff
+									Fase 3 (Semifinal)
 								  </label>
 								<div style="clear:both"></div>
 								  <label class="radio">
 									<input type="radio" name="fase" id="optionsRadios4" value="4">
-									Fase 3
+									Fase 4 (Final)
 								  </label>
 								<div style="clear:both"></div>
 								  <label class="radio">
 									<input type="radio" name="fase" id="optionsRadios5" value="5">
-									PlayOff
+									Fase 5 (Finalisima)
 								  </label>
 								</div>
 							  </div>
@@ -153,17 +153,7 @@
 								<div style="clear:both"></div>
 								  <label class="radio">
 									<input type="radio" name="fase" id="optionsRadios9" value="9">
-									PlayOff
-								  </label>
-								<div style="clear:both"></div>
-								  <label class="radio">
-									<input type="radio" name="fase" id="optionsRadios10" value="10">
-									Fase 3
-								  </label>
-								<div style="clear:both"></div>
-								  <label class="radio">
-									<input type="radio" name="fase" id="optionsRadios11" value="11">
-									PlayOff
+									Final
 								  </label>
 								<div style="clear:both"></div>
 								</div>
