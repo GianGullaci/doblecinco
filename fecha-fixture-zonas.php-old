@@ -74,13 +74,13 @@
 					      $fase_a_mostrar = "Fase 2";
 					}
 					else if ($fase_actual==3){
-					      $fase_a_mostrar = "PlayOff";
+					      $fase_a_mostrar = "Semifinal";
 					}
 					else if ($fase_actual==4){
-					      $fase_a_mostrar = "Fase 3";
+					      $fase_a_mostrar = "Final";
 					}
 					else if ($fase_actual==5){
-					      $fase_a_mostrar = "PlayOff";
+					      $fase_a_mostrar = "Finalisima";
 					}
 					else if ($fase_actual==6 or $fase_actual==1){
 					      $fase_a_mostrar = "Fase 1";
@@ -93,14 +93,8 @@
 // 					      $fase_a_mostrar = "Fase 2. <span style='color:#E42C1A;'>Torneo Clausura</span>";
 					}
 					else if ($fase_actual==9){
-					      $fase_a_mostrar = "PlayOff";
+					      $fase_a_mostrar = "Final";
 					}
-					else if ($fase_actual==10){
-						$fase_a_mostrar = "Fase 3";
-				  	}
-					  else if ($fase_actual==11){
-						$fase_a_mostrar = "PlayOff";
-				  	}
 					
 					
 					echo '<div class="fw-bold" >'.$fase_a_mostrar.'</div>';
@@ -184,7 +178,7 @@
 							$zona="A";
 						}
 						else{
-							$zona="A";
+							$zona="Campeonato";
 						}
 						echo '<div class="col-lg-6 col-12">
 							<table class="table table-bordered">
@@ -259,7 +253,7 @@
 							$zona="A";
 						}
 						else{
-							$zona="A";
+							$zona="Campeonato";
 						}
 						echo '<div class="col-lg-6 col-12">
 							<table class="table table-bordered">
@@ -347,7 +341,7 @@
 							$zona="B";
 						}
 						else{
-							$zona="B";
+							$zona="Competencia";
 						}
 						echo '<div class="col-lg-6 col-12">
 							<table class="table table-bordered">
@@ -424,7 +418,7 @@
 							$zona="B";
 						}
 						else{
-							$zona="B";
+							$zona="Competencia";
 						}
 						echo '<div class="col-lg-6 col-12">
 							<table class="table table-bordered">
