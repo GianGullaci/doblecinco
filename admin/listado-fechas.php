@@ -87,28 +87,28 @@
 										$fase= "Fase 2 Juveniles";
 									}
 									else if ($fase==3){
-										$fase= "PlayOff Fase 2";
+										$fase= "PlayOff Fase 2 Juveniles";
 									}
 									else if ($fase==4){
-										$fase= "Fase 3";
+										$fase= "Fase 3 Juveniles";
 									}
 									else if ($fase==5){
-										$fase= "PlayOff Fase 3";
+										$fase= "PlayOff Fase 3 Juveniles";
 									}
 									else if ($fase==7){
-										$fase= "Fase 2";
+										$fase= "Fase 2 Menores";
 									}
 									else if ($fase==8){
 										$fase= "Torneo Clausura Menores";
 									}
 									else if ($fase==9){
-										$fase= "PlayOff Fase 2";
+										$fase= "PlayOff Fase 2 Menores";
 									}
 									else if ($fase==10){
-										$fase= "Fase 3";
+										$fase= "Fase 3 Menores";
 									}
 									else if ($fase==11){
-										$fase= "PlayOff Fase 3";
+										$fase= "PlayOff Fase 3 Menores";
 									}
 									
 									echo "<td>".$fase."</td>";
