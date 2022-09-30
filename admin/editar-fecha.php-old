@@ -143,17 +143,17 @@
 								  <div style="clear:both"></div>
 								  <label class="radio">
 									<input type="radio" name="fase" id="optionsRadios3" value="3" <?php if ($fase==3) { echo 'checked=""'; }?> >
-									PlayOff
+									Fase 3 (Semifinal)
 								  </label>
 								  <div style="clear:both"></div>
 								  <label class="radio">
 									<input type="radio" name="fase" id="optionsRadios4" value="4" <?php if ($fase==4) { echo 'checked=""'; }?> >
-									Fase 3
+									Fase 4 (Final)
 								  </label>
 								  <div style="clear:both"></div>
 								  <label class="radio">
 									<input type="radio" name="fase" id="optionsRadios5" value="5" <?php if ($fase==5) { echo 'checked=""'; }?> >
-									PlayOff
+									Fase 5 (Finalisima)
 								  </label>
 								</div>
 							  </div>
@@ -176,20 +176,10 @@
 									<input type="radio" name="fase" id="optionsRadios8" value="8" <?php if ($fase==8) { echo 'checked=""'; }?> >
 									Fase 2: Torneo Clausura
 								  </label>-->
-								  <div style="clear:both"></div>
+								<div style="clear:both"></div>
 								  <label class="radio">
 									<input type="radio" name="fase" id="optionsRadios9" value="9" <?php if ($fase==9) { echo 'checked=""'; }?> >
-									PlayOff
-								  </label>
-								  <div style="clear:both"></div>
-								  <label class="radio">
-									<input type="radio" name="fase" id="optionsRadios10" value="10" <?php if ($fase==10) { echo 'checked=""'; }?> >
-									Fase 3
-								  </label>
-								  <div style="clear:both"></div>
-								  <label class="radio">
-									<input type="radio" name="fase" id="optionsRadios11" value="11" <?php if ($fase==11) { echo 'checked=""'; }?> >
-									PlayOff
+									Final
 								  </label>
 								<div style="clear:both"></div>
 								</div>
