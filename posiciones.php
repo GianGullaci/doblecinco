@@ -29,7 +29,7 @@
 				$comienzan_desplegables=false;
 				
 				
-				$query_fase = "select * 
+				/*$query_fase = "select * 
  					FROM resultados_partidos
  					
  					where (id_torneo=".$torneo_infantiles." or id_torneo=".$torneo_menores.") 
@@ -48,30 +48,30 @@
 					$comienzan_desplegables=true;
 					$mostrarfase1=false;
  					
- 				}
+ 				}*/
  				
  				$query_fase = "select * 
- 					FROM resultados_partidos
- 					
- 					where (id_torneo=".$torneo_infantiles." or id_torneo=".$torneo_menores.") 
- 					AND fase=4";
- 				$result_fase = $mysqli->query($query_fase); 
- 				if ($row_fase = mysqli_fetch_array($result_fase)){
- 				
+				 FROM resultados_partidos
+				 
+				 where (id_torneo=".$torneo_infantiles." or id_torneo=".$torneo_menores.") 
+				 AND (fase=10 or fase=4)";
+			 	$result_fase = $mysqli->query($query_fase); 
+				if ($row_fase = mysqli_fetch_array($result_fase)){
+				
 					$fase=4;
-					$fase2=0;
-					$titulo="Final Juveniles";
-					$subtitulo1="Copa Campeonato";
-					$subtitulo2="Copa Competencia";
+					$fase2=10;
+					$titulo="Fase 3";
+					$subtitulo1="Zona A";
+					$subtitulo2="Zona B";
 					echo '<div class="container">';
-					include("posiciones/final-menores.php");
+					include("posiciones/fase3.php");
 					echo '</div>';
 					$comienzan_desplegables=true;
- 					$mostrarfase1=false;
- 				}
+					
+				}
 				
 				
-				$query_fase = "select * 
+				/*$query_fase = "select * 
  					FROM resultados_partidos
  					
  					where (id_torneo=".$torneo_infantiles." or id_torneo=".$torneo_menores.") 
@@ -90,9 +90,9 @@
 					$comienzan_desplegables=true;
 					$mostrarfase1=false;
  					
- 				}
+ 				}*/
  				
- 				$query_fase = "select * 
+ 				/*$query_fase = "select * 
  					FROM resultados_partidos
  					
  					where (id_torneo=".$torneo_infantiles." or id_torneo=".$torneo_menores.") 
@@ -111,7 +111,7 @@
 					$comienzan_desplegables=true;
 					$mostrarfase1=false;
  					
- 				}
+ 				}*/
  				
  				
  				/*$query_fase = "select * 
